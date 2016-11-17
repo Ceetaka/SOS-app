@@ -15,6 +15,7 @@
 		122DDDAE1DDDD77B002F6971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */; };
 		122DDDB91DDDD77B002F6971 /* SOS_________appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDB81DDDD77B002F6971 /* SOS_________appTests.swift */; };
 		122DDDC41DDDD77B002F6971 /* SOS_________appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */; };
+		122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		122DDDBF1DDDD77B002F6971 /* SOS動画メール一斉送信appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SOS動画メール一斉送信appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SOS_________appUITests.swift"; sourceTree = "<group>"; };
 		122DDDC51DDDD77B002F6971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				122DDDAA1DDDD77B002F6971 /* Assets.xcassets */,
 				122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */,
 				122DDDAF1DDDD77B002F6971 /* Info.plist */,
+				122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */,
 			);
 			path = "SOS動画メール一斉送信app";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				122DDDA61DDDD77B002F6971 /* SecondViewController.swift in Sources */,
 				122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */,
+				122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */,
 				122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
