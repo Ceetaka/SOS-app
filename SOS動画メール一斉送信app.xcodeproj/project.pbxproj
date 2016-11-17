@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA11DDDD77B002F6971 /* AppDelegate.swift */; };
+		122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA31DDDD77B002F6971 /* FirstViewController.swift */; };
+		122DDDA61DDDD77B002F6971 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA51DDDD77B002F6971 /* SecondViewController.swift */; };
+		122DDDA91DDDD77B002F6971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122DDDA71DDDD77B002F6971 /* Main.storyboard */; };
+		122DDDAB1DDDD77B002F6971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122DDDAA1DDDD77B002F6971 /* Assets.xcassets */; };
+		122DDDAE1DDDD77B002F6971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */; };
+		122DDDB91DDDD77B002F6971 /* SOS_________appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDB81DDDD77B002F6971 /* SOS_________appTests.swift */; };
+		122DDDC41DDDD77B002F6971 /* SOS_________appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		122DDDB51DDDD77B002F6971 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 122DDD961DDDD77B002F6971 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 122DDD9D1DDDD77B002F6971;
+			remoteInfo = "SOS動画メール一斉送信app";
+		};
+		122DDDC01DDDD77B002F6971 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 122DDD961DDDD77B002F6971 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 122DDD9D1DDDD77B002F6971;
+			remoteInfo = "SOS動画メール一斉送信app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		122DDD9E1DDDD77B002F6971 /* SOS動画メール一斉送信app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOS動画メール一斉送信app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		122DDDA11DDDD77B002F6971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		122DDDA31DDDD77B002F6971 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		122DDDA51DDDD77B002F6971 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		122DDDA81DDDD77B002F6971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		122DDDAA1DDDD77B002F6971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		122DDDAD1DDDD77B002F6971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		122DDDAF1DDDD77B002F6971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		122DDDB41DDDD77B002F6971 /* SOS動画メール一斉送信appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SOS動画メール一斉送信appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		122DDDB81DDDD77B002F6971 /* SOS_________appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SOS_________appTests.swift"; sourceTree = "<group>"; };
+		122DDDBA1DDDD77B002F6971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		122DDDBF1DDDD77B002F6971 /* SOS動画メール一斉送信appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SOS動画メール一斉送信appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SOS_________appUITests.swift"; sourceTree = "<group>"; };
+		122DDDC51DDDD77B002F6971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		122DDD9B1DDDD77B002F6971 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122DDDB11DDDD77B002F6971 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122DDDBC1DDDD77B002F6971 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		122DDD951DDDD77B002F6971 = {
+			isa = PBXGroup;
+			children = (
+				122DDDA01DDDD77B002F6971 /* SOS動画メール一斉送信app */,
+				122DDDB71DDDD77B002F6971 /* SOS動画メール一斉送信appTests */,
+				122DDDC21DDDD77B002F6971 /* SOS動画メール一斉送信appUITests */,
+				122DDD9F1DDDD77B002F6971 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		122DDD9F1DDDD77B002F6971 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				122DDD9E1DDDD77B002F6971 /* SOS動画メール一斉送信app.app */,
+				122DDDB41DDDD77B002F6971 /* SOS動画メール一斉送信appTests.xctest */,
+				122DDDBF1DDDD77B002F6971 /* SOS動画メール一斉送信appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		122DDDA01DDDD77B002F6971 /* SOS動画メール一斉送信app */ = {
+			isa = PBXGroup;
+			children = (
+				122DDDA11DDDD77B002F6971 /* AppDelegate.swift */,
+				122DDDA31DDDD77B002F6971 /* FirstViewController.swift */,
+				122DDDA51DDDD77B002F6971 /* SecondViewController.swift */,
+				122DDDA71DDDD77B002F6971 /* Main.storyboard */,
+				122DDDAA1DDDD77B002F6971 /* Assets.xcassets */,
+				122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */,
+				122DDDAF1DDDD77B002F6971 /* Info.plist */,
+			);
+			path = "SOS動画メール一斉送信app";
+			sourceTree = "<group>";
+		};
+		122DDDB71DDDD77B002F6971 /* SOS動画メール一斉送信appTests */ = {
+			isa = PBXGroup;
+			children = (
+				122DDDB81DDDD77B002F6971 /* SOS_________appTests.swift */,
+				122DDDBA1DDDD77B002F6971 /* Info.plist */,
+			);
+			path = "SOS動画メール一斉送信appTests";
+			sourceTree = "<group>";
+		};
+		122DDDC21DDDD77B002F6971 /* SOS動画メール一斉送信appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */,
+				122DDDC51DDDD77B002F6971 /* Info.plist */,
+			);
+			path = "SOS動画メール一斉送信appUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		122DDD9D1DDDD77B002F6971 /* SOS動画メール一斉送信app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 122DDDC81DDDD77B002F6971 /* Build configuration list for PBXNativeTarget "SOS動画メール一斉送信app" */;
+			buildPhases = (
+				122DDD9A1DDDD77B002F6971 /* Sources */,
+				122DDD9B1DDDD77B002F6971 /* Frameworks */,
+				122DDD9C1DDDD77B002F6971 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SOS動画メール一斉送信app";
+			productName = "SOS動画メール一斉送信app";
+			productReference = 122DDD9E1DDDD77B002F6971 /* SOS動画メール一斉送信app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		122DDDB31DDDD77B002F6971 /* SOS動画メール一斉送信appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 122DDDCB1DDDD77B002F6971 /* Build configuration list for PBXNativeTarget "SOS動画メール一斉送信appTests" */;
+			buildPhases = (
+				122DDDB01DDDD77B002F6971 /* Sources */,
+				122DDDB11DDDD77B002F6971 /* Frameworks */,
+				122DDDB21DDDD77B002F6971 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				122DDDB61DDDD77B002F6971 /* PBXTargetDependency */,
+			);
+			name = "SOS動画メール一斉送信appTests";
+			productName = "SOS動画メール一斉送信appTests";
+			productReference = 122DDDB41DDDD77B002F6971 /* SOS動画メール一斉送信appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		122DDDBE1DDDD77B002F6971 /* SOS動画メール一斉送信appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 122DDDCE1DDDD77B002F6971 /* Build configuration list for PBXNativeTarget "SOS動画メール一斉送信appUITests" */;
+			buildPhases = (
+				122DDDBB1DDDD77B002F6971 /* Sources */,
+				122DDDBC1DDDD77B002F6971 /* Frameworks */,
+				122DDDBD1DDDD77B002F6971 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				122DDDC11DDDD77B002F6971 /* PBXTargetDependency */,
+			);
+			name = "SOS動画メール一斉送信appUITests";
+			productName = "SOS動画メール一斉送信appUITests";
+			productReference = 122DDDBF1DDDD77B002F6971 /* SOS動画メール一斉送信appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		122DDD961DDDD77B002F6971 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Takashi Onoyama";
+				TargetAttributes = {
+					122DDD9D1DDDD77B002F6971 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					122DDDB31DDDD77B002F6971 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 122DDD9D1DDDD77B002F6971;
+					};
+					122DDDBE1DDDD77B002F6971 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 122DDD9D1DDDD77B002F6971;
+					};
+				};
+			};
+			buildConfigurationList = 122DDD991DDDD77B002F6971 /* Build configuration list for PBXProject "SOS動画メール一斉送信app" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 122DDD951DDDD77B002F6971;
+			productRefGroup = 122DDD9F1DDDD77B002F6971 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				122DDD9D1DDDD77B002F6971 /* SOS動画メール一斉送信app */,
+				122DDDB31DDDD77B002F6971 /* SOS動画メール一斉送信appTests */,
+				122DDDBE1DDDD77B002F6971 /* SOS動画メール一斉送信appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		122DDD9C1DDDD77B002F6971 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				122DDDAE1DDDD77B002F6971 /* LaunchScreen.storyboard in Resources */,
+				122DDDAB1DDDD77B002F6971 /* Assets.xcassets in Resources */,
+				122DDDA91DDDD77B002F6971 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122DDDB21DDDD77B002F6971 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122DDDBD1DDDD77B002F6971 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		122DDD9A1DDDD77B002F6971 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				122DDDA61DDDD77B002F6971 /* SecondViewController.swift in Sources */,
+				122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */,
+				122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122DDDB01DDDD77B002F6971 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				122DDDB91DDDD77B002F6971 /* SOS_________appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122DDDBB1DDDD77B002F6971 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				122DDDC41DDDD77B002F6971 /* SOS_________appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		122DDDB61DDDD77B002F6971 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 122DDD9D1DDDD77B002F6971 /* SOS動画メール一斉送信app */;
+			targetProxy = 122DDDB51DDDD77B002F6971 /* PBXContainerItemProxy */;
+		};
+		122DDDC11DDDD77B002F6971 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 122DDD9D1DDDD77B002F6971 /* SOS動画メール一斉送信app */;
+			targetProxy = 122DDDC01DDDD77B002F6971 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		122DDDA71DDDD77B002F6971 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				122DDDA81DDDD77B002F6971 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				122DDDAD1DDDD77B002F6971 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		122DDDC61DDDD77B002F6971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		122DDDC71DDDD77B002F6971 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		122DDDC91DDDD77B002F6971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SOS動画メール一斉送信app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takashionoyama.SOS---------app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		122DDDCA1DDDD77B002F6971 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SOS動画メール一斉送信app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takashionoyama.SOS---------app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		122DDDCC1DDDD77B002F6971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SOS動画メール一斉送信appTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takashionoyama.SOS---------appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOS動画メール一斉送信app.app/SOS動画メール一斉送信app";
+			};
+			name = Debug;
+		};
+		122DDDCD1DDDD77B002F6971 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SOS動画メール一斉送信appTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takashionoyama.SOS---------appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOS動画メール一斉送信app.app/SOS動画メール一斉送信app";
+			};
+			name = Release;
+		};
+		122DDDCF1DDDD77B002F6971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "SOS動画メール一斉送信appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takashionoyama.SOS---------appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "SOS動画メール一斉送信app";
+			};
+			name = Debug;
+		};
+		122DDDD01DDDD77B002F6971 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "SOS動画メール一斉送信appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takashionoyama.SOS---------appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "SOS動画メール一斉送信app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		122DDD991DDDD77B002F6971 /* Build configuration list for PBXProject "SOS動画メール一斉送信app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				122DDDC61DDDD77B002F6971 /* Debug */,
+				122DDDC71DDDD77B002F6971 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		122DDDC81DDDD77B002F6971 /* Build configuration list for PBXNativeTarget "SOS動画メール一斉送信app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				122DDDC91DDDD77B002F6971 /* Debug */,
+				122DDDCA1DDDD77B002F6971 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		122DDDCB1DDDD77B002F6971 /* Build configuration list for PBXNativeTarget "SOS動画メール一斉送信appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				122DDDCC1DDDD77B002F6971 /* Debug */,
+				122DDDCD1DDDD77B002F6971 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		122DDDCE1DDDD77B002F6971 /* Build configuration list for PBXNativeTarget "SOS動画メール一斉送信appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				122DDDCF1DDDD77B002F6971 /* Debug */,
+				122DDDD01DDDD77B002F6971 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 122DDD961DDDD77B002F6971 /* Project object */;
+}
