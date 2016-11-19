@@ -130,7 +130,7 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MENU画面" image="スクリーンショット 2016-11-19 21.26.19.png" selectedImage="スクリーンショット 2016-11-19 21.26.19.png" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="MENU画面" image="スクリーンショット 2016-11-19 21.56.16.png" selectedImage="MENU画面.png" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +168,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="初期設定画面" image="スクリーンショット 2016-11-19 21.26.19.png" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="初期設定画面" image="スクリーンショット 2016-11-19 21.26.19.png" selectedImage="初期設定画面.png" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,25 +185,9 @@
                     <view key="view" contentMode="scaleToFill" id="TCs-8m-KgO" customClass="thirdViewController" customModule="SOS動画メール一斉送信app" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="戻る" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZG-u8-ZME">
-                                <frame key="frameInset" minX="234" minY="408" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="履歴画面" image="スクリーンショット 2016-11-19 21.26.19.png" selectedImage="スクリーンショット 2016-11-19 21.26.19.png" id="jn6-wi-KNT"/>
+                    <tabBarItem key="tabBarItem" title="履歴画面" image="スクリーンショット 2016-11-19 21.50.13.png" selectedImage="履歴画面.png" id="jn6-wi-KNT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic8-B2-x7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,6 +215,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MENU画面.png" width="22" height="16"/>
         <image name="スクリーンショット 2016-11-19 21.26.19.png" width="19" height="22"/>
+        <image name="スクリーンショット 2016-11-19 21.50.13.png" width="18" height="19"/>
+        <image name="スクリーンショット 2016-11-19 21.56.16.png" width="22" height="16"/>
+        <image name="初期設定画面.png" width="26" height="29"/>
+        <image name="履歴画面.png" width="20" height="23"/>
     </resources>
 </document>

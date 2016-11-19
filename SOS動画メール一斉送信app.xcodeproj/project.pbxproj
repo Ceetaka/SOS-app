@@ -16,7 +16,9 @@
 		122DDDB91DDDD77B002F6971 /* SOS_________appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDB81DDDD77B002F6971 /* SOS_________appTests.swift */; };
 		122DDDC41DDDD77B002F6971 /* SOS_________appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */; };
 		122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */; };
-		129291A31DE08ADB0032BBF0 /* スクリーンショット 2016-11-19 21.26.19.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291A21DE08ADB0032BBF0 /* スクリーンショット 2016-11-19 21.26.19.png */; };
+		129291AB1DE095E80032BBF0 /* MENU画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AA1DE095E80032BBF0 /* MENU画面.png */; };
+		129291AD1DE095FA0032BBF0 /* 初期設定画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AC1DE095FA0032BBF0 /* 初期設定画面.png */; };
+		129291AF1DE098AA0032BBF0 /* 履歴画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AE1DE098AA0032BBF0 /* 履歴画面.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,9 @@
 		122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SOS_________appUITests.swift"; sourceTree = "<group>"; };
 		122DDDC51DDDD77B002F6971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
-		129291A21DE08ADB0032BBF0 /* スクリーンショット 2016-11-19 21.26.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2016-11-19 21.26.19.png"; sourceTree = "<group>"; };
+		129291AA1DE095E80032BBF0 /* MENU画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MENU画面.png"; sourceTree = "<group>"; };
+		129291AC1DE095FA0032BBF0 /* 初期設定画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "初期設定画面.png"; sourceTree = "<group>"; };
+		129291AE1DE098AA0032BBF0 /* 履歴画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "履歴画面.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,9 @@
 		122DDDA01DDDD77B002F6971 /* SOS動画メール一斉送信app */ = {
 			isa = PBXGroup;
 			children = (
-				129291A21DE08ADB0032BBF0 /* スクリーンショット 2016-11-19 21.26.19.png */,
+				129291AA1DE095E80032BBF0 /* MENU画面.png */,
+				129291AC1DE095FA0032BBF0 /* 初期設定画面.png */,
+				129291AE1DE098AA0032BBF0 /* 履歴画面.png */,
 				122DDDA11DDDD77B002F6971 /* AppDelegate.swift */,
 				122DDDA31DDDD77B002F6971 /* FirstViewController.swift */,
 				122DDDA51DDDD77B002F6971 /* SecondViewController.swift */,
@@ -243,8 +249,10 @@
 			files = (
 				122DDDAE1DDDD77B002F6971 /* LaunchScreen.storyboard in Resources */,
 				122DDDAB1DDDD77B002F6971 /* Assets.xcassets in Resources */,
-				129291A31DE08ADB0032BBF0 /* スクリーンショット 2016-11-19 21.26.19.png in Resources */,
 				122DDDA91DDDD77B002F6971 /* Main.storyboard in Resources */,
+				129291AF1DE098AA0032BBF0 /* 履歴画面.png in Resources */,
+				129291AB1DE095E80032BBF0 /* MENU画面.png in Resources */,
+				129291AD1DE095FA0032BBF0 /* 初期設定画面.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
