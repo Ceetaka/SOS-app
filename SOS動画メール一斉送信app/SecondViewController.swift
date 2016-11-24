@@ -14,7 +14,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     // Tableで使用する配列を定義する.
     let myMailItems: NSArray = ["受取人", "件名", "メール文"]
-    let myPrivacyItems: NSArray = ["氏名", "性別", "住所", "年齢", "性別"]
+    let myPrivacyItems: NSArray = ["氏名", "性別", "年齢","住所", "携帯電話番号"]
     let myLocationItems: NSArray = ["GPS/on,off","AppleID(任意)"]
     
     // Sectionで使用する配列を定義する.
@@ -52,15 +52,15 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
 //    }
     
     
-    //cellの高さを指定する
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if indexPath.section == 0{
-            return 80
-        }else{
-            return 30
-        }
-    }
+////    //cellの高さを指定する
+////    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+////        
+////        if  (indexPath.section == 0 && indexPath.row == 2) {
+////            return 80
+////        }else{
+////            return 30
+////        }
+//    }
 
     
 
