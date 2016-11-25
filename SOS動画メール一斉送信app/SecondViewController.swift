@@ -9,9 +9,11 @@
 import UIKit
 
 class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
     @IBOutlet weak var myTableView: UITableView!
     
-//    var sections = ["受取人", "件名", "メール文", "氏名", "性別", "住所", "年齢", "性別","GPS/on,off","AppleID(任意)"]
+//    var cell = tableView.dequeueReusableCellWithIdentifier(myCell2) as SecondViewController
+//    cell.myTextLabel?.text = ("")
     
     // Tableで使用する配列を定義する.
     let myMailItems: NSArray = ["送信先", "件名", "メール文"]
@@ -44,10 +46,12 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         //矢印を右側につける
         cell.accessoryType = .disclosureIndicator
         
-        //accessoryViewを追加
-        if cell.accessoryView == nil {
-            cell.accessoryView = UISwitch()
-        }
+        
+        
+//        //accessoryViewを追加
+//        if cell.accessoryView == nil {
+//            cell.accessoryView = UISwitch()
+//        }
         
         return cell
     }
@@ -95,7 +99,6 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
 //            print("Value: \(myLocationItems[indexPath.row])")
 //        }
         performSegue(withIdentifier: "showmyMailItems1",sender: nil)
-        
     }
     
     /*
