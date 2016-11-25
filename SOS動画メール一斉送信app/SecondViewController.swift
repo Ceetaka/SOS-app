@@ -34,17 +34,28 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     //}
     //表示するデータの中身
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "myCell2")
-        //cell.textLabel?.text = sections[indexPath.row]
+//        var cell = UITableViewCell(style: .default, reuseIdentifier: "myCell2")
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "myCell2") as! myTableViewCell
+
+        var myLabel1 = cell.viewWithTag(1) as! UILabel
+        
+        var myLabel2 = cell.viewWithTag(2) as! UILabel
+        
         if indexPath.section == 0 {
-            cell.textLabel?.text = "\(myMailItems[indexPath.row])"
+            cell.myLabel1.text = "\(myMailItems[indexPath.row])"
+            cell.myLabel2.text = ""
         } else if indexPath.section == 1 {
-            cell.textLabel?.text = "\(myPrivacyItems[indexPath.row])"
+            cell.myLabel1.text = "\(myPrivacyItems[indexPath.row])"
+            cell.myLabel2.text = ""
         } else if indexPath.section == 2 {
-            cell.textLabel?.text = "\(myLocationItems[indexPath.row])"
+            cell.myLabel1.text = "\(myLocationItems[indexPath.row])"
+            cell.myLabel2.text = ""
         }
         //矢印を右側につける
         cell.accessoryType = .disclosureIndicator
+        
+       
         
         
         
