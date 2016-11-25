@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */; };
 		122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA11DDDD77B002F6971 /* AppDelegate.swift */; };
 		122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA31DDDD77B002F6971 /* FirstViewController.swift */; };
 		122DDDA61DDDD77B002F6971 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA51DDDD77B002F6971 /* SecondViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMailItems1ViewController.swift; sourceTree = "<group>"; };
 		122DDD9E1DDDD77B002F6971 /* SOS動画メール一斉送信app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOS動画メール一斉送信app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122DDDA11DDDD77B002F6971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		122DDDA31DDDD77B002F6971 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -112,12 +114,13 @@
 				129291AE1DE098AA0032BBF0 /* 履歴画面.png */,
 				122DDDA11DDDD77B002F6971 /* AppDelegate.swift */,
 				122DDDA31DDDD77B002F6971 /* FirstViewController.swift */,
-				122DDDA51DDDD77B002F6971 /* SecondViewController.swift */,
 				122DDDA71DDDD77B002F6971 /* Main.storyboard */,
+				122DDDA51DDDD77B002F6971 /* SecondViewController.swift */,
 				122DDDAA1DDDD77B002F6971 /* Assets.xcassets */,
 				122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */,
 				122DDDAF1DDDD77B002F6971 /* Info.plist */,
 				122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */,
+				120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */,
 			);
 			path = "SOS動画メール一斉送信app";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				122DDDA61DDDD77B002F6971 /* SecondViewController.swift in Sources */,
 				122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */,
 				122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */,
+				120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */,
 				122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
