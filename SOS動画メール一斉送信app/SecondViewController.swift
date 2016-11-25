@@ -42,21 +42,19 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         
         var myLabel2 = cell.viewWithTag(2) as! UILabel
         
+        
         if indexPath.section == 0 {
             cell.myLabel1.text = "\(myMailItems[indexPath.row])"
-            cell.myLabel2.text = ""
+            cell.myLabel2.text = "cetaka1973@gmail.com"
         } else if indexPath.section == 1 {
             cell.myLabel1.text = "\(myPrivacyItems[indexPath.row])"
-            cell.myLabel2.text = ""
+            cell.myLabel2.text = "小野山　隆"
         } else if indexPath.section == 2 {
             cell.myLabel1.text = "\(myLocationItems[indexPath.row])"
             cell.myLabel2.text = ""
         }
         //矢印を右側につける
         cell.accessoryType = .disclosureIndicator
-        
-       
-        
         
         
 //        //accessoryViewを追加

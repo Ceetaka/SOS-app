@@ -12,18 +12,25 @@ class myMailItems1ViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myTextField1: UITextField!
-    @IBOutlet weak var myTextFierld2: UITextField!
+    @IBOutlet weak var myTextField2: UITextField!
     @IBOutlet weak var myTextField3: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func mailTextField1(_ sender: AnyObject) {
+        var myTextF1 = myTextField1.text
+        var myTextF2 = myTextField2.text
+        var myTextF3 = myTextField3.text
+
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+           }
     
 
     /*
