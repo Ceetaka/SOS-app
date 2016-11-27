@@ -34,18 +34,28 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     //}
     //表示するデータの中身
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "myCell2")
-        //cell.textLabel?.text = sections[indexPath.row]
+//        var cell = UITableViewCell(style: .default, reuseIdentifier: "myCell2")
+      
+        var cell = tableView.dequeueReusableCell(withIdentifier: "myCell2") as! myMailItems1
+
+        var syokiLabel1 = cell.viewWithTag(1) as! UILabel
+        
+        var syokiLabel2 = cell.viewWithTag(2) as! UILabel
+    
+    
         if indexPath.section == 0 {
-            cell.textLabel?.text = "\(myMailItems[indexPath.row])"
+            cell.syokiLabel1.text = "\(myMailItems[indexPath.row])"
+            cell.syokiLabel2.text = ""
         } else if indexPath.section == 1 {
-            cell.textLabel?.text = "\(myPrivacyItems[indexPath.row])"
+            cell.syokiLabel1.text = "\(myPrivacyItems[indexPath.row])"
+            cell.syokiLabel2.text = "小野山　隆"
         } else if indexPath.section == 2 {
-            cell.textLabel?.text = "\(myLocationItems[indexPath.row])"
+            cell.syokiLabel1.text = "\(myLocationItems[indexPath.row])"
+            cell.syokiLabel2.text = ""
         }
+    
         //矢印を右側につける
         cell.accessoryType = .disclosureIndicator
-        
         
         
 //        //accessoryViewを追加
@@ -89,7 +99,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     /*
      Cellが選択された際に呼び出される.
      */
-    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
 //        if indexPath.section == 0 {
 //            print("Value: \(myMailItems[indexPath.row])")
