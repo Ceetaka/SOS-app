@@ -35,6 +35,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     //表示するデータの中身
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        var cell = UITableViewCell(style: .default, reuseIdentifier: "myCell2")
+<<<<<<< HEAD
       
         var cell = tableView.dequeueReusableCell(withIdentifier: "myCell2") as! myMailItems1
 
@@ -52,6 +53,25 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         } else if indexPath.section == 2 {
             cell.syokiLabel1.text = "\(myLocationItems[indexPath.row])"
             cell.syokiLabel2.text = ""
+=======
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "myCell2") as! myTableViewCell
+
+        var myLabel1 = cell.viewWithTag(1) as! UILabel
+        
+        var myLabel2 = cell.viewWithTag(2) as! UILabel
+        
+        
+        if indexPath.section == 0 {
+            cell.myLabel1.text = "\(myMailItems[indexPath.row])"
+            cell.myLabel2.text = "cetaka1973@gmail.com"
+        } else if indexPath.section == 1 {
+            cell.myLabel1.text = "\(myPrivacyItems[indexPath.row])"
+            cell.myLabel2.text = "小野山　隆"
+        } else if indexPath.section == 2 {
+            cell.myLabel1.text = "\(myLocationItems[indexPath.row])"
+            cell.myLabel2.text = ""
+>>>>>>> b8fa2bac0e8dc4d7e465e267206a8ce178244bff
         }
     
         //矢印を右側につける
