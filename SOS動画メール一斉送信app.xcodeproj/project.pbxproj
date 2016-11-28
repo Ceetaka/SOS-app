@@ -17,6 +17,8 @@
 		122DDDB91DDDD77B002F6971 /* SOS_________appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDB81DDDD77B002F6971 /* SOS_________appTests.swift */; };
 		122DDDC41DDDD77B002F6971 /* SOS_________appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */; };
 		122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */; };
+		128E1B1D1DEC719200061FD6 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128E1B1C1DEC719200061FD6 /* AssetsLibrary.framework */; };
+		128E1B1F1DEC719A00061FD6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128E1B1E1DEC719A00061FD6 /* AVFoundation.framework */; };
 		129291AB1DE095E80032BBF0 /* MENU画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AA1DE095E80032BBF0 /* MENU画面.png */; };
 		129291AD1DE095FA0032BBF0 /* 初期設定画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AC1DE095FA0032BBF0 /* 初期設定画面.png */; };
 		129291AF1DE098AA0032BBF0 /* 履歴画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AE1DE098AA0032BBF0 /* 履歴画面.png */; };
@@ -57,6 +59,8 @@
 		122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SOS_________appUITests.swift"; sourceTree = "<group>"; };
 		122DDDC51DDDD77B002F6971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
+		128E1B1C1DEC719200061FD6 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		128E1B1E1DEC719A00061FD6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		129291AA1DE095E80032BBF0 /* MENU画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MENU画面.png"; sourceTree = "<group>"; };
 		129291AC1DE095FA0032BBF0 /* 初期設定画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "初期設定画面.png"; sourceTree = "<group>"; };
 		129291AE1DE098AA0032BBF0 /* 履歴画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "履歴画面.png"; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128E1B1F1DEC719A00061FD6 /* AVFoundation.framework in Frameworks */,
+				128E1B1D1DEC719200061FD6 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +101,7 @@
 				122DDDB71DDDD77B002F6971 /* SOS動画メール一斉送信appTests */,
 				122DDDC21DDDD77B002F6971 /* SOS動画メール一斉送信appUITests */,
 				122DDD9F1DDDD77B002F6971 /* Products */,
+				128E1B1B1DEC719200061FD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +151,15 @@
 				122DDDC51DDDD77B002F6971 /* Info.plist */,
 			);
 			path = "SOS動画メール一斉送信appUITests";
+			sourceTree = "<group>";
+		};
+		128E1B1B1DEC719200061FD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				128E1B1E1DEC719A00061FD6 /* AVFoundation.framework */,
+				128E1B1C1DEC719200061FD6 /* AssetsLibrary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
