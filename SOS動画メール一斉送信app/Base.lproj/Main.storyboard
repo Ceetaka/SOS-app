@@ -159,20 +159,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="myCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-Ep-ryj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-Ep-ryj">
                                 <frame key="frameInset" minY="64" width="321" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-<<<<<<< HEAD
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell2" id="AzI-eo-jCt" customClass="myMailItems1" customModule="SOS動画メール一斉送信app" customModuleProvider="target">
-=======
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell2" id="AzI-eo-jCt" customClass="myTableViewCell" customModule="SOS動画メール一斉送信app" customModuleProvider="target">
->>>>>>> b8fa2bac0e8dc4d7e465e267206a8ce178244bff
                                         <rect key="frame" x="0.0" y="28" width="321" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AzI-eo-jCt" id="LVb-DW-q7X">
-                                            <frame key="frameInset" width="321" height="43.5"/>
+                                            <frame key="frameInset" width="321" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pv-Gf-Q9c">
@@ -182,12 +178,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-<<<<<<< HEAD
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-PR-0Zc">
-=======
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-PR-0Zc">
->>>>>>> b8fa2bac0e8dc4d7e465e267206a8ce178244bff
-                                                    <frame key="frameInset" minX="125" minY="8" width="188" height="21"/>
+                                                    <frame key="frameInset" minX="139" minY="8" width="188" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
@@ -196,13 +188,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="myLabel1" destination="8Pv-Gf-Q9c" id="3eD-jh-D6O"/>
-                                            <outlet property="myLabel2" destination="2n8-PR-0Zc" id="1NR-QW-bGc"/>
-<<<<<<< HEAD
-                                            <outlet property="syokiLabel1" destination="2n8-PR-0Zc" id="S4E-hO-awh"/>
-                                            <outlet property="syokiLabel2" destination="2n8-PR-0Zc" id="RDZ-wl-t6H"/>
-=======
->>>>>>> b8fa2bac0e8dc4d7e465e267206a8ce178244bff
+                                            <outlet property="myLab1" destination="8Pv-Gf-Q9c" id="v7Y-By-FUR"/>
+                                            <outlet property="myLab2" destination="2n8-PR-0Zc" id="PU1-72-qxh"/>
                                             <segue destination="3jh-v0-Ysw" kind="show" identifier="showmyMailItems1" trigger="accessoryAction" id="4f6-Wn-wLG"/>
                                         </connections>
                                     </tableViewCell>
@@ -242,14 +229,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-=======
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39x-Cf-iwh">
                                 <frame key="frameInset" minX="25" minY="232" width="284" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="mailTextField1:" destination="3jh-v0-Ysw" eventType="editingDidEnd" id="hnG-IT-NLZ"/>
+                                    <action selector="mailTextField2:" destination="3jh-v0-Ysw" eventType="editingDidEnd" id="15h-jI-gx2"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rf-2a-fh7">
                                 <frame key="frameInset" minX="25" minY="293" width="284" height="30"/>
@@ -257,8 +246,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="mailTextField3:" destination="3jh-v0-Ysw" eventType="editingDidEnd" id="dZE-UM-AMa"/>
+                                </connections>
                             </textField>
->>>>>>> b8fa2bac0e8dc4d7e465e267206a8ce178244bff
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="送信先（最大3件まで送信可能）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEL-RN-pOB">
                                 <frame key="frameInset" minX="25" minY="119" width="279" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -267,7 +258,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7YN-un-J9f">
-                                <frame key="frameInset" minX="25" minY="171" width="284" height="30"/>
+                                <frame key="frameInset" minX="25" minY="166" width="284" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -279,20 +270,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-<<<<<<< HEAD
-=======
                     <connections>
-                        <outlet property="myLabel" destination="nEL-RN-pOB" id="bX2-p9-k9l"/>
-                        <outlet property="myTextField1" destination="7YN-un-J9f" id="8S3-S3-i4A"/>
-                        <outlet property="myTextField2" destination="39x-Cf-iwh" id="lmL-ah-MYR"/>
-                        <outlet property="myTextField3" destination="3rf-2a-fh7" id="l4E-OH-DeU"/>
-                        <outlet property="myTextFierld2" destination="39x-Cf-iwh" id="Tng-2h-NlU"/>
+                        <outlet property="mailLabel" destination="nEL-RN-pOB" id="upY-nA-VGU"/>
+                        <outlet property="mailTextField1" destination="7YN-un-J9f" id="ihy-qA-Gbt"/>
+                        <outlet property="mailTextField2" destination="39x-Cf-iwh" id="1HW-bh-s3G"/>
+                        <outlet property="mailTextField3" destination="3rf-2a-fh7" id="4HK-0k-YC5"/>
                     </connections>
->>>>>>> b8fa2bac0e8dc4d7e465e267206a8ce178244bff
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMe-gb-Ehp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2378" y="359"/>
+            <point key="canvasLocation" x="2295" y="352"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aev-zd-riY">

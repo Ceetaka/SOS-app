@@ -1,17 +1,20 @@
 //
-//  myMailItems1.swift
+//  myTableViewCell.swift
 //  SOS動画メール一斉送信app
 //
-//  Created by 小野山　隆 on 2016/11/27.
+//  Created by 小野山　隆 on 2016/11/26.
 //  Copyright © 2016年 Takashi Onoyama. All rights reserved.
 //
 
 import UIKit
 
-class myMailItems1: UITableViewCell {
+class myTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var syokiLabel1: UILabel!
-    @IBOutlet weak var syokiLabel2: UILabel!
+    @IBOutlet weak var myLab1: UILabel!
+   
+    @IBOutlet weak var myLab2: UILabel!
+    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
