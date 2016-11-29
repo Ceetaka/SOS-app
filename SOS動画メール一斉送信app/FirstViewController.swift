@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import AssetsLibrary
 
-class ViewController: UIViewController,AVCaptureFileOutputRecordingDelegate {
+class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate {
     
     var session: AVCaptureSession!
     var videoDevice: AVCaptureDevice!
@@ -38,7 +38,7 @@ class ViewController: UIViewController,AVCaptureFileOutputRecordingDelegate {
     @IBAction func tapStop(_ sender: AnyObject) {
         fileOutput.stopRecording()
         session.stopRunning()
-        UISaveVideoAtPathToSavedPhotosAlbum(filePath, self, #selector(ViewController.video(_:didFinishSavingWithError:contextInfo:)), nil)
+        UISaveVideoAtPathToSavedPhotosAlbum(filePath, self, #selector(FirstViewController.video(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @IBAction func tapPreview(_ sender: AnyObject) {
