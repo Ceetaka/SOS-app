@@ -25,7 +25,9 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     
     @IBOutlet weak var myLabel: UILabel!
     
-    @IBAction func tapRecord(_ sender: AnyObject) {
+    @IBAction func tapRecord(_ sender: UIButton) {
+        //    }
+        //    @IBAction func tapRecord(_ sender: AnyObject) {
         print("recording started")
         myLabel.text = "録画中"
         //        myLabel.text = "recording started"
@@ -35,7 +37,9 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         session.startRunning()
         fileOutput.startRecording(toOutputFileURL: fileURL, recordingDelegate: self)
     }
-    @IBAction func tapStop(_ sender: AnyObject) {
+    @IBAction func tapStop(_ sender: UIButton) {
+        //    }
+        //    @IBAction func tapStop(_ sender: AnyObject) {
         fileOutput.stopRecording()
         session.stopRunning()
         UISaveVideoAtPathToSavedPhotosAlbum(filePath, self, #selector(FirstViewController.video(_:didFinishSavingWithError:contextInfo:)), nil)
