@@ -24,6 +24,9 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         super.viewDidLoad()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        myTableView.reloadData()
+    }
     
     //行数を決定
     //func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,28 +44,35 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell" + String(cellIndex), for: indexPath) as! myTableViewCell
 
-//        var cell = tableView.dequeueReusableCell(withIdentifier: "myCell0") as! myTableViewCell
-
 //        var myLab1 = cell.viewWithTag(1) as! UILabel
 //        
 //        var myLab2 = cell.viewWithTag(2) as! UILabel
         
+            //2.保存されたデーターを呼び出して表示
+            //ユーザーデフォルトを用意する
+            let myDefault = UserDefaults.standard
+            
+            //データーを読み出して
+            let myStr1 = myDefault.string(forKey:"MailAddress1")
+            let myStr2 = myDefault.string(forKey:"MailAddress2")
+            let myStr3 = myDefault.string(forKey:"MailAddress3")
+            
         
         if indexPath.section == 0 {
             
             if indexPath.row == 0 {
                 cell.myLab1.text = "\(myMailItems[indexPath.row])"
-                cell.myLab2.text = "aaa"
+                cell.myLab2.text = myStr1
             }
             
             if indexPath.row == 1 {
                 cell.myLab3.text = "\(myMailItems[indexPath.row])"
-                cell.myLab4.text = "bbb"
+                cell.myLab4.text = ""
             }
             
             if indexPath.row == 2 {
                 cell.myLab5.text = "\(myMailItems[indexPath.row])"
-                cell.myLab6.text = "bbb"
+                cell.myLab6.text = ""
             }
         }
         if indexPath.section == 1 {
