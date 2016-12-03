@@ -14,7 +14,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     // Tableで使用する配列を定義する.
     let myMailItems: NSArray = ["送信先", "件名", "メール文"]
-    let myPrivacyItems: NSArray = ["氏名", "性別", "年齢","住所", "携帯電話番号"]
+    let myPrivacyItems: NSArray = ["氏名", "性別", "生年月日","住所", "携帯電話番号"]
     let myLocationItems: NSArray = ["GPS/on,off","AppleID(任意)"]
     
     // Sectionで使用する配列を定義する.
@@ -22,8 +22,9 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+    
+    //完了ボタンタップ後入力内容を即反映させる
     override func viewWillAppear(_ animated: Bool) {
         myTableView.reloadData()
     }
@@ -56,7 +57,16 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
             let myStr1 = myDefault.string(forKey:"MailAddress1")
             let myStr2 = myDefault.string(forKey:"MailAddress2")
             let myStr3 = myDefault.string(forKey:"MailAddress3")
-            
+            let myStr4 = myDefault.string(forKey:"MailKenmei1")
+            let myStr5 = myDefault.string(forKey:"MailContent")
+            let myStrName = myDefault.string(forKey:"myPrivacyItems1")
+
+            let myStrBirth = myDefault.string(forKey:"myPrivacyBirth")
+            let myStrAdd = myDefault.string(forKey:"myPrivacyAddress")
+            let myStrPhone1 = myDefault.string(forKey:"phoneNumber1")
+            let myStrPhone2 = myDefault.string(forKey:"phoneNumber2")
+
+        
         
         if indexPath.section == 0 {
             
@@ -67,19 +77,19 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
             
             if indexPath.row == 1 {
                 cell.myLab3.text = "\(myMailItems[indexPath.row])"
-                cell.myLab4.text = ""
+                cell.myLab4.text = myStr4
             }
             
             if indexPath.row == 2 {
                 cell.myLab5.text = "\(myMailItems[indexPath.row])"
-                cell.myLab6.text = ""
+                cell.myLab6.text = myStr5
             }
         }
         if indexPath.section == 1 {
                 
             if indexPath.row == 0 {
                 cell.myLab7.text = "\(myPrivacyItems[indexPath.row])"
-                cell.myLab8.text = "aaa"
+                cell.myLab8.text = myStrName
             }
                 
             if indexPath.row == 1 {
@@ -89,17 +99,17 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
                 
             if indexPath.row == 2 {
                 cell.myLab11.text = "\(myPrivacyItems[indexPath.row])"
-                cell.myLab12.text = "bbb"
+                cell.myLab12.text = myStrBirth
             }
 
             if indexPath.row == 3 {
                 cell.myLab13.text = "\(myPrivacyItems[indexPath.row])"
-                cell.myLab14.text = "bbb"
+                cell.myLab14.text = myStrAdd
             }
             
             if indexPath.row == 4 {
                 cell.myLab15.text = "\(myPrivacyItems[indexPath.row])"
-                cell.myLab16.text = "bbb"
+                cell.myLab16.text = myStrPhone1
             }
         }
         if indexPath.section == 2 {

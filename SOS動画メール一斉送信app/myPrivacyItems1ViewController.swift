@@ -1,16 +1,16 @@
 //
-//  myMailItems2ViewController.swift
+//  myPrivacyItems1ViewController.swift
 //  SOS動画メール一斉送信app
 //
-//  Created by 小野山　隆 on 2016/12/03.
+//  Created by 小野山　隆 on 2016/12/04.
 //  Copyright © 2016年 Takashi Onoyama. All rights reserved.
 //
 
 import UIKit
 
-class myMailItems2ViewController: UIViewController {
+class myPrivacyItems1ViewController: UIViewController {
 
-    @IBOutlet weak var kenmeiTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,40 +22,41 @@ class myMailItems2ViewController: UIViewController {
         let myDefault = UserDefaults.standard
         
         //データーを読み出して
-        let myStr4 = myDefault.string(forKey:"MailKenmei1")
-                //文字列が入っていたら表示する
-        if let tmpStr1 = myStr4 {
-            kenmeiTextField.text = tmpStr1
+        let myStrName = myDefault.string(forKey:"myPrivacyItems1")
+        //文字列が入っていたら表示する
+        if let tmpStr1 = myStrName {
+            nameTextField.text = tmpStr1
         }
     }
     
     @IBAction func tapReturn(_ sender: UITextField) {
-
+        
         //1.ユーザーデフォルトに保存
         //ユーザーデフォルトを用意
         let myDefault = UserDefaults.standard
-    
+        
         //データーを書き込んで
-        myDefault.set(kenmeiTextField.text,forKey:"MailKenmei1")
-    
+        myDefault.set(nameTextField.text,forKey:"myPrivacyItems1")
+        
         //即反映させる(奥にしまう作業）
         myDefault.synchronize()
     }
-
+    
     @IBAction func tapFinished(_ sender: UIButton) {
-    
+        
         let myDefault = UserDefaults.standard
-    
+        
         //データーを書き込んで
-        myDefault.set(kenmeiTextField.text,forKey:"MailKenmei1")
-    
+        myDefault.set(nameTextField.text,forKey:"myPrivacyItems1")
+        
         //即反映させる(奥にしまう作業）
         myDefault.synchronize()
-    
+        
         //Segue(show)1つ前の画面に戻る
         self.navigationController?.popViewController(animated: true)
-    
+        
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

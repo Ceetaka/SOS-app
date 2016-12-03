@@ -90,6 +90,7 @@ class myMailItems1ViewController: UIViewController {
         //即反映させる(奥にしまう作業）
         myDefault.synchronize()
         
+        //Segue(show)1つ前の画面に戻る        
         self.navigationController?.popViewController(animated: true)
         
     }

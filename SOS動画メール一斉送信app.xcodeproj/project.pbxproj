@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */; };
+		1226E0781DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */; };
 		122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA11DDDD77B002F6971 /* AppDelegate.swift */; };
 		122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA31DDDD77B002F6971 /* FirstViewController.swift */; };
 		122DDDA61DDDD77B002F6971 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA51DDDD77B002F6971 /* SecondViewController.swift */; };
@@ -22,6 +23,11 @@
 		129291AB1DE095E80032BBF0 /* MENU画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AA1DE095E80032BBF0 /* MENU画面.png */; };
 		129291AD1DE095FA0032BBF0 /* 初期設定画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AC1DE095FA0032BBF0 /* 初期設定画面.png */; };
 		129291AF1DE098AA0032BBF0 /* 履歴画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AE1DE098AA0032BBF0 /* 履歴画面.png */; };
+		12DD885F1DF2ED8700D95A42 /* myMailItems2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DD885E1DF2ED8700D95A42 /* myMailItems2ViewController.swift */; };
+		12DD88611DF3151D00D95A42 /* myMailItems3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DD88601DF3151D00D95A42 /* myMailItems3ViewController.swift */; };
+		12DD88631DF31E2500D95A42 /* myPrivacyItems4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DD88621DF31E2500D95A42 /* myPrivacyItems4ViewController.swift */; };
+		12DD88651DF329E700D95A42 /* myPrivacyItems5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DD88641DF329E700D95A42 /* myPrivacyItems5ViewController.swift */; };
+		12DD88671DF3317700D95A42 /* myPrivacyItems3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DD88661DF3317700D95A42 /* myPrivacyItems3ViewController.swift */; };
 		12F54C3A1DE8A5DA00AF12B2 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F54C391DE8A5DA00AF12B2 /* myTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMailItems1ViewController.swift; sourceTree = "<group>"; };
+		1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems1ViewController.swift; sourceTree = "<group>"; };
 		122DDD9E1DDDD77B002F6971 /* SOS動画メール一斉送信app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOS動画メール一斉送信app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122DDDA11DDDD77B002F6971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		122DDDA31DDDD77B002F6971 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +71,11 @@
 		129291AA1DE095E80032BBF0 /* MENU画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MENU画面.png"; sourceTree = "<group>"; };
 		129291AC1DE095FA0032BBF0 /* 初期設定画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "初期設定画面.png"; sourceTree = "<group>"; };
 		129291AE1DE098AA0032BBF0 /* 履歴画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "履歴画面.png"; sourceTree = "<group>"; };
+		12DD885E1DF2ED8700D95A42 /* myMailItems2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMailItems2ViewController.swift; sourceTree = "<group>"; };
+		12DD88601DF3151D00D95A42 /* myMailItems3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMailItems3ViewController.swift; sourceTree = "<group>"; };
+		12DD88621DF31E2500D95A42 /* myPrivacyItems4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems4ViewController.swift; sourceTree = "<group>"; };
+		12DD88641DF329E700D95A42 /* myPrivacyItems5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems5ViewController.swift; sourceTree = "<group>"; };
+		12DD88661DF3317700D95A42 /* myPrivacyItems3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems3ViewController.swift; sourceTree = "<group>"; };
 		12F54C391DE8A5DA00AF12B2 /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +143,12 @@
 				122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */,
 				122DDDAF1DDDD77B002F6971 /* Info.plist */,
 				122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */,
+				12DD885E1DF2ED8700D95A42 /* myMailItems2ViewController.swift */,
+				12DD88601DF3151D00D95A42 /* myMailItems3ViewController.swift */,
+				12DD88621DF31E2500D95A42 /* myPrivacyItems4ViewController.swift */,
+				12DD88641DF329E700D95A42 /* myPrivacyItems5ViewController.swift */,
+				12DD88661DF3317700D95A42 /* myPrivacyItems3ViewController.swift */,
+				1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */,
 			);
 			path = "SOS動画メール一斉送信app";
 			sourceTree = "<group>";
@@ -300,12 +318,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12DD88611DF3151D00D95A42 /* myMailItems3ViewController.swift in Sources */,
 				122DDDA61DDDD77B002F6971 /* SecondViewController.swift in Sources */,
+				12DD88631DF31E2500D95A42 /* myPrivacyItems4ViewController.swift in Sources */,
 				122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */,
+				1226E0781DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift in Sources */,
+				12DD88651DF329E700D95A42 /* myPrivacyItems5ViewController.swift in Sources */,
 				122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */,
 				120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */,
 				122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */,
+				12DD885F1DF2ED8700D95A42 /* myMailItems2ViewController.swift in Sources */,
 				12F54C3A1DE8A5DA00AF12B2 /* myTableViewCell.swift in Sources */,
+				12DD88671DF3317700D95A42 /* myPrivacyItems3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,11 +10,55 @@ import UIKit
 
 class myPrivacyItems4ViewController: UIViewController {
 
+    @IBOutlet weak var addressTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //2.保存されたデーターを呼び出して表示
+        //ユーザーデフォルトを用意する
+        let myDefault = UserDefaults.standard
+        
+        //データーを読み出して
+        let myStrAdd = myDefault.string(forKey:"myPrivacyAddress")
+        //文字列が入っていたら表示する
+        if let tmpStr1 = myStrAdd {
+            addressTextField.text = tmpStr1
+        }
+    }
+    
+    @IBAction func tapReturn(_ sender: UITextField) {
+        
+        //1.ユーザーデフォルトに保存
+        //ユーザーデフォルトを用意
+        let myDefault = UserDefaults.standard
+        
+        //データーを書き込んで
+        myDefault.set(addressTextField.text,forKey:"myPrivacyAddress")
+        
+        //即反映させる(奥にしまう作業）
+        myDefault.synchronize()
+    }
+    
+    @IBAction func tapFinished(_ sender: UIButton) {
+        
+        let myDefault = UserDefaults.standard
+        
+        //データーを書き込んで
+        myDefault.set(addressTextField.text,forKey:"myPrivacyAddress")
+        
+        //即反映させる(奥にしまう作業）
+        myDefault.synchronize()
+        
+        //Segue(show)1つ前の画面に戻る
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
