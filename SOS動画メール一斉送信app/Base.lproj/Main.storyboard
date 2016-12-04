@@ -639,15 +639,6 @@
                     <view key="view" contentMode="scaleToFill" id="OFC-lr-dfG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqV-Dl-F3v">
-                                <frame key="frameInset" minX="139" minY="223" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="位置情報GPS" id="eL9-3q-vG1">
@@ -716,7 +707,7 @@
             </objects>
             <point key="canvasLocation" x="2295" y="1093"/>
         </scene>
-        <!--Title-->
+        <!--Apple ID(任意)-->
         <scene sceneID="cEz-kc-rvt">
             <objects>
                 <viewController storyboardIdentifier="myCell9" id="sVB-GL-7Fb" sceneMemberID="viewController">
@@ -738,7 +729,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="h6q-uo-PBB">
+                    <navigationItem key="navigationItem" title="Apple ID(任意)" id="h6q-uo-PBB">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Bm4-ps-vMw">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rgB-Jw-IEw">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
@@ -752,10 +743,10 @@
             </objects>
             <point key="canvasLocation" x="3921" y="373"/>
         </scene>
-        <!--個人情報(性別)-->
+        <!--個人情報(血液型)-->
         <scene sceneID="rDJ-Hv-yV1">
             <objects>
-                <viewController id="88U-4G-jIl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myCell4" id="88U-4G-jIl" customClass="myPrivacyItems2ViewController" customModule="SOS動画メール一斉送信app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YhT-O5-4i4"/>
                         <viewControllerLayoutGuide type="bottom" id="lBk-Te-LSF"/>
@@ -765,7 +756,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="個人情報(性別)" id="KwU-Di-UwX">
+                    <navigationItem key="navigationItem" title="個人情報(血液型)" id="KwU-Di-UwX">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Tch-hI-69F">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fMb-To-CXq">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
@@ -777,7 +768,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccM-Ys-Ef3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3144" y="1093"/>
+            <point key="canvasLocation" x="3142.5" y="1092.2535211267607"/>
         </scene>
         <!--個人情報(生年月日)-->
         <scene sceneID="eW1-7B-6lr">

@@ -14,7 +14,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     // Tableで使用する配列を定義する.
     let myMailItems: NSArray = ["送信先", "件名", "メール文"]
-    let myPrivacyItems: NSArray = ["氏名", "性別", "生年月日","住所", "携帯電話番号"]
+    let myPrivacyItems: NSArray = ["氏名", "血液型", "生年月日","住所", "携帯電話番号"]
     let myLocationItems: NSArray = ["GPS/on,off","AppleID(任意)"]
     
     // Sectionで使用する配列を定義する.
