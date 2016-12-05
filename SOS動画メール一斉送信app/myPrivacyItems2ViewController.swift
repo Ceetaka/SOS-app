@@ -8,46 +8,88 @@
 
 import UIKit
 
-class myPrivacyItems2ViewController: UIViewController {
+class myPrivacyItems2ViewController: UIViewController ,UIPickerViewDataSource,UIPickerViewDelegate{
+    
+    @IBOutlet weak var myLabel: UILabel!
 
-    var myButton: UIButton!
+    @IBOutlet weak var myTextField: UITextField!
+    
+    @IBOutlet weak var myPickerView1: UIPickerView!
+    //データを配列で用意する
+    var genderList = ["A型","B型","O型","AB型"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
-        myButton = UIButton()
-        myButton.frame = CGRectMake(0,100,200,40)
-        myButton.addTarget(self, action: Selector("onClickMyButton:"), for: .touchUpInside)
-        // ボタンに画像セット
-        myButton.setImage(UIImage(named: "check.png"), for: UIControlState.selected)
-        myButton.setImage(UIImage(named: "nocheck.png"), for: UIControlState.normal)
+        myPickerView1.dataSource = self
+        myPickerView1.delegate = self
         
-        self.view.addSubview(myButton)
     }
-    func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
-        return CGRect(x: x, y: y, width: width, height: height)
+    
+    //ピッカービューの列数
+    func numberOfComponents(in pickerView:UIPickerView) -> Int {return 1
+    }
+    //ピッカービューの行数
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {return 4
+    }
+    //ピッカービューに表示する文字のセット
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genderList[row]
+    }
+    
+    //ピッカービューで選択されたときに行う作業
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        var mySelectedDate = genderList[row]
+        self.myTextField.text = mySelectedDate as String
+
+     
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //2.保存されたデーターを呼び出して表示
+        //ユーザーデフォルトを用意する
+        let myDefault = UserDefaults.standard
+        
+        //データーを読み出して
+        let myStrGender = myDefault.string(forKey:"myPrivacyGender")
+        //文字列が入っていたら表示する
+        if let tmpStr1 = myStrGender {
+            myTextField.text = tmpStr1
+        }
+    }
+    
+    @IBAction func tapTextField(_ sender: UITextField) {
+        
+        //1.ユーザーデフォルトに保存
+        //ユーザーデフォルトを用意
+        let myDefault = UserDefaults.standard
+        
+        //データーを書き込んで
+        myDefault.set(myTextField.text,forKey:"myPrivacyGender")
+        
+        //即反映させる(奥にしまう作業）
+        myDefault.synchronize()
+    }
+    
+    @IBAction func tapFinished(_ sender: UIButton) {
+        
+        let myDefault = UserDefaults.standard
+        
+        //データーを書き込んで
+        myDefault.set(myTextField.text,forKey:"myPrivacyGender")
+        
+        //即反映させる(奥にしまう作業）
+        myDefault.synchronize()
+        
+        //Segue(show)1つ前の画面に戻る
+        self.navigationController?.popViewController(animated: true)
+        
     }
 
-    
-    
-    internal func onClickMyButton(sender: UIButton){
-        myButton.isSelected = !myButton.isSelected
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+

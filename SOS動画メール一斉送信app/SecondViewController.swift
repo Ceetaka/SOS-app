@@ -60,7 +60,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
             let myStr4 = myDefault.string(forKey:"MailKenmei1")
             let myStr5 = myDefault.string(forKey:"MailContent")
             let myStrName = myDefault.string(forKey:"myPrivacyItems1")
-
+            let myStrGender = myDefault.string(forKey:"myPrivacyGender")
             let myStrBirth = myDefault.string(forKey:"myPrivacyBirth")
             let myStrAdd = myDefault.string(forKey:"myPrivacyAddress")
             let myStrPhone1 = myDefault.string(forKey:"phoneNumber1")
@@ -94,7 +94,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
                 
             if indexPath.row == 1 {
                 cell.myLab9.text = "\(myPrivacyItems[indexPath.row])"
-                cell.myLab10.text = "bbb"
+                cell.myLab10.text = myStrGender
             }
                 
             if indexPath.row == 2 {
