@@ -12,9 +12,16 @@ class myMailItems3ViewController: UIViewController {
 
     @IBOutlet weak var mailContent: UITextView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //TextView 枠線表示と太さ,枠線の角を丸く,枠線の色
+        mailContent.layer.borderWidth = 0.5
+        mailContent.layer.cornerRadius = 7
+        mailContent.layer.borderColor = UIColor.lightGray.cgColor
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         //2.保存されたデーターを呼び出して表示

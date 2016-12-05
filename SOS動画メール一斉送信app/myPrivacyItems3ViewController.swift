@@ -12,12 +12,30 @@ class myPrivacyItems3ViewController: UIViewController {
 
     @IBOutlet weak var birthTextField: UITextField!
 
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func changedDate(_ sender: UIDatePicker) {
+        
+        print(sender.date)
+        
+        //フーマットをyyy/mm/ddに変更
+        myDatePicker.datePickerMode = UIDatePickerMode.date
+        let df = DateFormatter()
+        df.dateFormat = "yyyy年MM月dd日"
+        
+        var mySelectedDate = df.string(from: sender.date)
+        self.birthTextField.text = mySelectedDate as String
+       
+        
+        
+    }
     
+
     override func viewWillAppear(_ animated: Bool) {
         //2.保存されたデーターを呼び出して表示
         //ユーザーデフォルトを用意する

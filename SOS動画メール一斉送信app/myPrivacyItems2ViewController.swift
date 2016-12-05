@@ -28,7 +28,8 @@ class myPrivacyItems2ViewController: UIViewController {
         return CGRect(x: x, y: y, width: width, height: height)
     }
 
-        
+    
+    
     internal func onClickMyButton(sender: UIButton){
         myButton.isSelected = !myButton.isSelected
     }
