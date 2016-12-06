@@ -57,8 +57,8 @@ class myPrivacyItems2ViewController: UIViewController ,UIPickerViewDataSource,UI
         }
     }
     
-    @IBAction func tapTextField(_ sender: UITextField) {
-        
+        @IBAction func tapTextField(_ sender: UITextField) {
+    
         //1.ユーザーデフォルトに保存
         //ユーザーデフォルトを用意
         let myDefault = UserDefaults.standard
