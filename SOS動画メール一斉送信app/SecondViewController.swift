@@ -15,7 +15,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     // Tableで使用する配列を定義する.
     let myMailItems: NSArray = ["送信先", "件名", "メール文"]
     let myPrivacyItems: NSArray = ["氏名", "血液型", "生年月日","住所", "携帯電話番号"]
-    let myLocationItems: NSArray = ["GPS/on,off"]
+    let myLocationItems: NSArray = ["位置情報(GPS)サービス"]
     
     // Sectionで使用する配列を定義する.
     let mySections: NSArray = ["メール内容", "個人情報","位置情報"]
@@ -116,7 +116,6 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
                 
             if indexPath.row == 0 {
                 cell.myLab17.text = "\(myLocationItems[indexPath.row])"
-                cell.myLab18.text = "aaa"
             }
                 
 //            if indexPath.row == 1 {
