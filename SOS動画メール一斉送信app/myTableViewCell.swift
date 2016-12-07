@@ -46,9 +46,6 @@ class myTableViewCell: UITableViewCell {
     
     @IBOutlet weak var myLab18: UILabel!
     
-    @IBOutlet weak var myLab19: UILabel!
-    
-    @IBOutlet weak var myLab20: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
