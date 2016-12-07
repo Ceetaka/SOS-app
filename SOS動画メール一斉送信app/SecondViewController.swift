@@ -15,10 +15,10 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     // Tableで使用する配列を定義する.
     let myMailItems: NSArray = ["送信先", "件名", "メール文"]
     let myPrivacyItems: NSArray = ["氏名", "血液型", "生年月日","住所", "携帯電話番号"]
-    let myLocationItems: NSArray = ["位置情報(GPS)サービス"]
+    let myLocationItems: NSArray = ["アプリ操作説明"]
     
     // Sectionで使用する配列を定義する.
-    let mySections: NSArray = ["メール内容", "個人情報","位置情報"]
+    let mySections: NSArray = ["メール内容", "個人情報","操作説明"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

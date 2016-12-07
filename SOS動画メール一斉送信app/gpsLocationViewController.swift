@@ -10,12 +10,20 @@ import UIKit
 
 class gpsLocationViewController: UIViewController {
 
+    @IBOutlet weak var gamenKirikae: UILabel!
+    @IBOutlet weak var videoStartStop: UILabel!    
+    @IBOutlet weak var mailSousinLabel: UILabel!
+    @IBOutlet weak var syokisettei: UILabel!
     @IBOutlet weak var gpsLabel1: UILabel!
     @IBOutlet weak var gpsLabel2: UILabel!
-    @IBOutlet weak var gpsLabel3: UILabel!
     
+    @IBOutlet weak var gamenkirikaeLbel: UILabel!
+    @IBOutlet weak var videoStartStopTextView: UITextView!
+    @IBOutlet weak var mailSousin: UITextView!
+    @IBOutlet weak var syokisetteiTextView: UITextView!
     @IBOutlet weak var gpsTextView1: UITextView!
-    @IBOutlet weak var gpsTextView2: UITextView!
+
+    @IBOutlet weak var gpsTexView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
