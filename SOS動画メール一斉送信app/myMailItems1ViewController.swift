@@ -27,18 +27,18 @@ class myMailItems1ViewController: UIViewController {
     let myDefault = UserDefaults.standard
         
     //データーを読み出して
-    let myStr1 = myDefault.string(forKey:"MailAddress1")
-    let myStr2 = myDefault.string(forKey:"MailAddress2")
-    let myStr3 = myDefault.string(forKey:"MailAddress3")
+    let myStrMailAddress1 = myDefault.string(forKey:"MailAddress1")
+    let myStrMailAddress2 = myDefault.string(forKey:"MailAddress2")
+    let myStrMailAddress3 = myDefault.string(forKey:"MailAddress3")
     
     //文字列が入っていたら表示する
-    if let tmpStr1 = myStr1 {
+    if let tmpStr1 = myStrMailAddress1 {
         mailTextField1.text = tmpStr1
     }
-    if let tmpStr2 = myStr2 {
+    if let tmpStr2 = myStrMailAddress2 {
         mailTextField2.text = tmpStr2
     }
-    if let tmpStr3 = myStr3 {
+    if let tmpStr3 = myStrMailAddress3 {
         mailTextField3.text = tmpStr3
     }
     }

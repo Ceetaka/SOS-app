@@ -15,7 +15,7 @@ class myMailItems2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    //画面が表示されるとき
     override func viewWillAppear(_ animated: Bool) {
         //2.保存されたデーターを呼び出して表示
         //ユーザーデフォルトを用意する

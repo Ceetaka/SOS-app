@@ -9,10 +9,16 @@
 import UIKit
 import AVFoundation
 import AssetsLibrary
-
 import MessageUI
 
 class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate, MFMailComposeViewControllerDelegate {
+    
+    @IBOutlet weak var myReview3: UITextView!
+    
+//    var myMailAdd1:String!
+//    var myMailAdd2:String!
+//    var myMailAdd3:String!
+      var myMailKenmei:String?
     
     var session: AVCaptureSession!
     var videoDevice: AVCaptureDevice!
@@ -119,6 +125,42 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         prepareVideo()
     }
     
+    //画面が表示されるとき
+    override func viewWillAppear(_ animated: Bool) {
+    
+        //2.保存されたデーターを呼び出して表示
+        //ユーザーデフォルトを用意する
+        let myDefault = UserDefaults.standard
+        
+        //データーを読み出して
+        let myStrMailAddress1 = myDefault.string(forKey:"MailAddress1")
+        let myStrMailAddress2 = myDefault.string(forKey:"MailAddress2")
+        let myStrMailAddress3 = myDefault.string(forKey:"MailAddress3")
+        let myStr4 = myDefault.string(forKey:"MailKenmei1")
+        let myStr5 = myDefault.string(forKey:"MailContent")
+        let myStrName = myDefault.string(forKey:"myPrivacyItems1")
+        let myStrGender = myDefault.string(forKey:"myPrivacyGender")
+        let myStrBirth = myDefault.string(forKey:"myPrivacyBirth")
+        let myStrAdd = myDefault.string(forKey:"myPrivacyAddress")
+        let myStrPhone1 = myDefault.string(forKey:"phoneNumber1")
+        let myStrPhone2 = myDefault.string(forKey:"phoneNumber2")
+        //文字列が入っていたら表示する
+//        if let tmpStr1 = myStrMailAddress1 {
+//            myMailAdd1 = tmpStr1
+//        }
+//        if let tmpStr2 = myStrMailAddress2 {
+//            myMailAdd2 = tmpStr2
+//        }
+//        if let tmpStr3 = myStrMailAddress3 {
+//            myMailAdd3 = tmpStr3
+//        }
+//        if let tmpStr4 = myStr4 {
+//            myMailKenmei = tmpStr4
+//        }
+        myMailKenmei = myStr4
+        
+    }
+    
     //sampleSendEmail
     @IBAction func tapBtn(_ sender: UIButton) {
         
@@ -133,7 +175,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         
         // Configure the fields of the interface.
         composeVC.setToRecipients(["address@example.com","test@gmail.com"])
-        composeVC.setSubject("Hello!")
+        composeVC.setSubject(myMailKenmei!)
         composeVC.setMessageBody("Hello from California!", isHTML: false)
         
         // パスからassetを生成.
@@ -145,7 +187,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

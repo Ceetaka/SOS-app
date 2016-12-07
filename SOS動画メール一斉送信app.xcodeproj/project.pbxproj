@@ -11,6 +11,7 @@
 		121E253B1DF7334100FDF456 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253A1DF7334100FDF456 /* CoreLocation.framework */; };
 		121E253D1DF7C0D600FDF456 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253C1DF7C0D600FDF456 /* MessageUI.framework */; };
 		121E25411DF82D8100FDF456 /* gpsLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E25401DF82D8100FDF456 /* gpsLocationViewController.swift */; };
+		121E25431DF846E100FDF456 /* sample.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 121E25421DF846E100FDF456 /* sample.MOV */; };
 		1226E0781DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */; };
 		1226E07A1DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0791DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift */; };
 		1226E07D1DF3E53F002CC8C2 /* nocheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 1226E07B1DF3E53F002CC8C2 /* nocheck.png */; };
@@ -59,6 +60,7 @@
 		121E253A1DF7334100FDF456 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		121E253C1DF7C0D600FDF456 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		121E25401DF82D8100FDF456 /* gpsLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpsLocationViewController.swift; sourceTree = "<group>"; };
+		121E25421DF846E100FDF456 /* sample.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = sample.MOV; sourceTree = "<group>"; };
 		1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems1ViewController.swift; sourceTree = "<group>"; };
 		1226E0791DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems2ViewController.swift; sourceTree = "<group>"; };
 		1226E07B1DF3E53F002CC8C2 /* nocheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nocheck.png; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				129291AE1DE098AA0032BBF0 /* 履歴画面.png */,
 				1226E07C1DF3E53F002CC8C2 /* check.png */,
 				1226E07B1DF3E53F002CC8C2 /* nocheck.png */,
+				121E25421DF846E100FDF456 /* sample.MOV */,
 				122DDDA11DDDD77B002F6971 /* AppDelegate.swift */,
 				122DDDA31DDDD77B002F6971 /* FirstViewController.swift */,
 				122DDDA71DDDD77B002F6971 /* Main.storyboard */,
@@ -313,6 +316,7 @@
 				1226E07E1DF3E53F002CC8C2 /* check.png in Resources */,
 				122DDDAB1DDDD77B002F6971 /* Assets.xcassets in Resources */,
 				122DDDA91DDDD77B002F6971 /* Main.storyboard in Resources */,
+				121E25431DF846E100FDF456 /* sample.MOV in Resources */,
 				129291AF1DE098AA0032BBF0 /* 履歴画面.png in Resources */,
 				129291AB1DE095E80032BBF0 /* MENU画面.png in Resources */,
 				129291AD1DE095FA0032BBF0 /* 初期設定画面.png in Resources */,

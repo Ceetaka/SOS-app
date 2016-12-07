@@ -953,7 +953,7 @@
         <!--履歴画面-->
         <scene sceneID="5WY-1t-TMf">
             <objects>
-                <viewController id="9E7-fV-ZPO" sceneMemberID="viewController">
+                <viewController id="9E7-fV-ZPO" customClass="FirstViewController" customModule="SOS動画メール一斉送信app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5b2-lw-YgG"/>
                         <viewControllerLayoutGuide type="bottom" id="FfQ-KI-ygZ"/>
@@ -961,13 +961,25 @@
                     <view key="view" contentMode="scaleToFill" id="TCs-8m-KgO" customClass="thirdViewController" customModule="SOS動画メール一斉送信app" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="It completely sent the video and the masseges .                                       " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oO5-fo-HnG">
+                                <frame key="frameInset" minX="40" minY="116" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="履歴画面" image="スクリーンショット 2016-11-19 21.50.13.png" selectedImage="履歴画面.png" id="jn6-wi-KNT"/>
+                    <connections>
+                        <outlet property="myReview3" destination="oO5-fo-HnG" id="CKd-GJ-kQL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic8-B2-x7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592" y="-320"/>
+            <point key="canvasLocation" x="1631" y="-320"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

@@ -54,9 +54,9 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
             let myDefault = UserDefaults.standard
             
             //データーを読み出して
-            let myStr1 = myDefault.string(forKey:"MailAddress1")
-            let myStr2 = myDefault.string(forKey:"MailAddress2")
-            let myStr3 = myDefault.string(forKey:"MailAddress3")
+            let myStrMailAddress1 = myDefault.string(forKey:"MailAddress1")
+            let myStrMailAddress2 = myDefault.string(forKey:"MailAddress2")
+            let myStrMailAddress3 = myDefault.string(forKey:"MailAddress3")
             let myStr4 = myDefault.string(forKey:"MailKenmei1")
             let myStr5 = myDefault.string(forKey:"MailContent")
             let myStrName = myDefault.string(forKey:"myPrivacyItems1")
@@ -72,7 +72,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
             
             if indexPath.row == 0 {
                 cell.myLab1.text = "\(myMailItems[indexPath.row])"
-                cell.myLab2.text = myStr1
+                cell.myLab2.text = myStrMailAddress1
             }
             
             if indexPath.row == 1 {
@@ -117,31 +117,10 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
             if indexPath.row == 0 {
                 cell.myLab17.text = "\(myLocationItems[indexPath.row])"
             }
-                
-//            if indexPath.row == 1 {
-//                cell.myLab19.text = "\(myLocationItems[indexPath.row])"
-//                cell.myLab20.text = "bbb"
-//            }
         }
-            
-//            cell.myLab + (numberLab1[indexPath.row]).text = "\(myMailItems[indexPath.row])"
-//            cell.myLab + (numberLab2).text = "cetaka1973@gmail.com"
         
-//        else if indexPath.section == 1 {
-//            cell.myLab1.text = "\(myPrivacyItems[indexPath.row])"
-//            cell.myLab2.text = ""
-//        } else if indexPath.section == 2 {
-//            cell.myLab1.text = "\(myLocationItems[indexPath.row])"
-//            cell.myLab2.text = ""
-//        }
         //矢印を右側につける
         cell.accessoryType = .disclosureIndicator
-        
-        
-//        //accessoryViewを追加
-//        if cell.accessoryView == nil {
-//            cell.accessoryView = UISwitch()
-//        }
         
         return cell
     }
