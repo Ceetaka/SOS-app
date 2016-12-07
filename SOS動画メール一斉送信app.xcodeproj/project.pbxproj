@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */; };
+		121E25391DF729DD00FDF456 /* myLocationItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E25381DF729DD00FDF456 /* myLocationItems1ViewController.swift */; };
+		121E253B1DF7334100FDF456 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253A1DF7334100FDF456 /* CoreLocation.framework */; };
 		1226E0781DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */; };
 		1226E07A1DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0791DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift */; };
 		1226E07D1DF3E53F002CC8C2 /* nocheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 1226E07B1DF3E53F002CC8C2 /* nocheck.png */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMailItems1ViewController.swift; sourceTree = "<group>"; };
+		121E25381DF729DD00FDF456 /* myLocationItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myLocationItems1ViewController.swift; sourceTree = "<group>"; };
+		121E253A1DF7334100FDF456 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems1ViewController.swift; sourceTree = "<group>"; };
 		1226E0791DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems2ViewController.swift; sourceTree = "<group>"; };
 		1226E07B1DF3E53F002CC8C2 /* nocheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nocheck.png; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121E253B1DF7334100FDF456 /* CoreLocation.framework in Frameworks */,
 				128E1B1F1DEC719A00061FD6 /* AVFoundation.framework in Frameworks */,
 				128E1B1D1DEC719200061FD6 /* AssetsLibrary.framework in Frameworks */,
 			);
@@ -158,6 +163,7 @@
 				12DD88661DF3317700D95A42 /* myPrivacyItems3ViewController.swift */,
 				12DD88621DF31E2500D95A42 /* myPrivacyItems4ViewController.swift */,
 				12DD88641DF329E700D95A42 /* myPrivacyItems5ViewController.swift */,
+				121E25381DF729DD00FDF456 /* myLocationItems1ViewController.swift */,
 			);
 			path = "SOS動画メール一斉送信app";
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 		128E1B1B1DEC719200061FD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				121E253A1DF7334100FDF456 /* CoreLocation.framework */,
 				128E1B1E1DEC719A00061FD6 /* AVFoundation.framework */,
 				128E1B1C1DEC719200061FD6 /* AssetsLibrary.framework */,
 			);
@@ -339,6 +346,7 @@
 				120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */,
 				1226E07A1DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift in Sources */,
 				122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */,
+				121E25391DF729DD00FDF456 /* myLocationItems1ViewController.swift in Sources */,
 				12DD885F1DF2ED8700D95A42 /* myMailItems2ViewController.swift in Sources */,
 				12F54C3A1DE8A5DA00AF12B2 /* myTableViewCell.swift in Sources */,
 				12DD88671DF3317700D95A42 /* myPrivacyItems3ViewController.swift in Sources */,

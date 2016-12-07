@@ -15,7 +15,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     // Tableで使用する配列を定義する.
     let myMailItems: NSArray = ["送信先", "件名", "メール文"]
     let myPrivacyItems: NSArray = ["氏名", "血液型", "生年月日","住所", "携帯電話番号"]
-    let myLocationItems: NSArray = ["GPS/on,off","AppleID(任意)"]
+    let myLocationItems: NSArray = ["GPS/on,off"]
     
     // Sectionで使用する配列を定義する.
     let mySections: NSArray = ["メール内容", "個人情報","位置情報"]
@@ -39,7 +39,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         var cellIndex = indexPath.row
         if indexPath.section == 1 {
             cellIndex = (indexPath.row) + 3
-        }else if indexPath.section == 2{
+        }else if indexPath.section == 2 {
             cellIndex = (indexPath.row) + 8
         }
 
@@ -119,10 +119,10 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
                 cell.myLab18.text = "aaa"
             }
                 
-            if indexPath.row == 1 {
-                cell.myLab19.text = "\(myLocationItems[indexPath.row])"
-                cell.myLab20.text = "bbb"
-            }
+//            if indexPath.row == 1 {
+//                cell.myLab19.text = "\(myLocationItems[indexPath.row])"
+//                cell.myLab20.text = "bbb"
+//            }
         }
             
 //            cell.myLab + (numberLab1[indexPath.row]).text = "\(myMailItems[indexPath.row])"
