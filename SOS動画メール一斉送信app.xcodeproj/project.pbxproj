@@ -10,6 +10,7 @@
 		120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */; };
 		121E253B1DF7334100FDF456 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253A1DF7334100FDF456 /* CoreLocation.framework */; };
 		121E253D1DF7C0D600FDF456 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253C1DF7C0D600FDF456 /* MessageUI.framework */; };
+		121E25411DF82D8100FDF456 /* gpsLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E25401DF82D8100FDF456 /* gpsLocationViewController.swift */; };
 		1226E0781DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */; };
 		1226E07A1DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0791DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift */; };
 		1226E07D1DF3E53F002CC8C2 /* nocheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 1226E07B1DF3E53F002CC8C2 /* nocheck.png */; };
@@ -57,6 +58,7 @@
 		120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMailItems1ViewController.swift; sourceTree = "<group>"; };
 		121E253A1DF7334100FDF456 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		121E253C1DF7C0D600FDF456 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		121E25401DF82D8100FDF456 /* gpsLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpsLocationViewController.swift; sourceTree = "<group>"; };
 		1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems1ViewController.swift; sourceTree = "<group>"; };
 		1226E0791DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems2ViewController.swift; sourceTree = "<group>"; };
 		1226E07B1DF3E53F002CC8C2 /* nocheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nocheck.png; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				12DD88661DF3317700D95A42 /* myPrivacyItems3ViewController.swift */,
 				12DD88621DF31E2500D95A42 /* myPrivacyItems4ViewController.swift */,
 				12DD88641DF329E700D95A42 /* myPrivacyItems5ViewController.swift */,
+				121E25401DF82D8100FDF456 /* gpsLocationViewController.swift */,
 			);
 			path = "SOS動画メール一斉送信app";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				12DD88631DF31E2500D95A42 /* myPrivacyItems4ViewController.swift in Sources */,
 				122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */,
 				1226E0781DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift in Sources */,
+				121E25411DF82D8100FDF456 /* gpsLocationViewController.swift in Sources */,
 				12DD88651DF329E700D95A42 /* myPrivacyItems5ViewController.swift in Sources */,
 				122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */,
 				120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */,

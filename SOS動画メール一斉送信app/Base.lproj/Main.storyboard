@@ -125,7 +125,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="55" sectionFooterHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-Ep-ryj">
-                                <frame key="frameInset" minY="90" width="321" height="475"/>
+                                <frame key="frameInset" minX="-1" minY="94" width="321" height="425"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -604,7 +604,7 @@
         <!--位置情報(GPS)-->
         <scene sceneID="Q3f-ms-ZPt">
             <objects>
-                <viewController storyboardIdentifier="myCell8" id="5ZB-8q-F5Z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myCell8" id="5ZB-8q-F5Z" customClass="gpsLocationViewController" customModule="SOS動画メール一斉送信app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mKF-jp-sL2"/>
                         <viewControllerLayoutGuide type="bottom" id="maH-kO-vYT"/>
@@ -620,7 +620,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="アプリ起動時の&quot;位置情報(GPS)サービス 許可&quot;ダイヤログを許可された方は自動的に送信メールに現場住所が送信されます" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T8A-z9-a13">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="アプリ起動時の&quot;位置情報(GPS)サービス 許可&quot;ダイヤログを許可を選択された方は自動的に送信メールに現場住所が送信されます" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T8A-z9-a13">
                                 <frame key="frameInset" minX="16" minY="139" width="288" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -629,21 +629,21 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="アプリ起動時の&quot;位置情報(GPS)サービス 許可&quot;ダイヤログを許可しないを選択された方は送信メールに現場住所は送信されません" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3aX-ik-Cvj">
-                                <frame key="frameInset" minX="12" minY="347" width="292" height="128"/>
+                                <frame key="frameInset" minX="17" minY="347" width="292" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="位置情報(GPS)サービス　&quot;オフ&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZv-Db-biu">
-                                <frame key="frameInset" minX="23" minY="328" width="275" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  位置情報(GPS)サービス　&quot;オン&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kro-Vc-G91">
+                                <frame key="frameInset" minX="12" minY="117" width="297" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  位置情報(GPS)サービス　&quot;オン&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kro-Vc-G91">
-                                <frame key="frameInset" minX="12" minY="114" width="297" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="位置情報(GPS)サービス　&quot;オフ&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZv-Db-biu">
+                                <frame key="frameInset" minX="23" minY="329" width="275" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -652,7 +652,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="位置情報(GPS)" id="eL9-3q-vG1"/>
+                    <navigationItem key="navigationItem" title="位置情報(GPS)" id="eL9-3q-vG1">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="GuI-na-78A">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HeK-cv-3Fz">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="tapFinish:" destination="5ZB-8q-F5Z" eventType="touchUpInside" id="bng-Is-Kac"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gpsLabel1" destination="kro-Vc-G91" id="p1n-CO-eAg"/>
+                        <outlet property="gpsLabel2" destination="jZv-Db-biu" id="Luj-GX-n2h"/>
+                        <outlet property="gpsLabel3" destination="Gs7-TZ-8Ti" id="hu7-BT-AGW"/>
+                        <outlet property="gpsTextView1" destination="T8A-z9-a13" id="AzU-td-Y9G"/>
+                        <outlet property="gpsTextView2" destination="3aX-ik-Cvj" id="JaQ-VP-Ed1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVd-aV-9wo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
