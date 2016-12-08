@@ -24,14 +24,14 @@ class myPrivacyItems5ViewController: UIViewController {
         let myDefault = UserDefaults.standard
         
         //データーを読み出して
-        let myStr1 = myDefault.string(forKey:"phoneNumber1")
-        let myStr2 = myDefault.string(forKey:"phoneNumber2")
+        let myStrPhone1 = myDefault.string(forKey:"phoneNumber1")
+        let myStrPhone2 = myDefault.string(forKey:"phoneNumber2")
         
         //文字列が入っていたら表示する
-        if let tmpStr1 = myStr1 {
+        if let tmpStr1 = myStrPhone1 {
             phoneTextField1.text = tmpStr1
         }
-        if let tmpStr2 = myStr2 {
+        if let tmpStr2 = myStrPhone2 {
             phoneTextField2.text = tmpStr2
         }
         }

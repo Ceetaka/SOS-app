@@ -16,10 +16,18 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     
     @IBOutlet weak var myReview3: UITextView!
     
-//    var myMailAdd1:String!
-//    var myMailAdd2:String!
-//    var myMailAdd3:String!
-      var myMailKenmei:String?
+    var myStrMailAddress1 = ""
+    var myStrMailAddress2 = ""
+    var myStrMailAddress3 = ""
+    var myStr4 = ""
+    var myStr5 = ""
+    var myStrName = ""
+    var myStrGender = ""
+    var myStrBirth = ""
+    var myStrAdd = ""
+    var myStrPhone1 = ""
+    var myStrPhone2 = ""
+
     
     var session: AVCaptureSession!
     var videoDevice: AVCaptureDevice!
@@ -28,6 +36,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     var audioInput: AVCaptureDeviceInput!
     var fileOutput: AVCaptureMovieFileOutput!
     var filePath: String!
+    
     
     var previewFlag: Bool = false;
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -158,32 +167,51 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         let myDefault = UserDefaults.standard
         
         //データーを読み出して
-        let myStrMailAddress1 = myDefault.string(forKey:"MailAddress1")
-        let myStrMailAddress2 = myDefault.string(forKey:"MailAddress2")
-        let myStrMailAddress3 = myDefault.string(forKey:"MailAddress3")
-        let myStr4 = myDefault.string(forKey:"MailKenmei1")
-        let myStr5 = myDefault.string(forKey:"MailContent")
-        let myStrName = myDefault.string(forKey:"myPrivacyItems1")
-        let myStrGender = myDefault.string(forKey:"myPrivacyGender")
-        let myStrBirth = myDefault.string(forKey:"myPrivacyBirth")
-        let myStrAdd = myDefault.string(forKey:"myPrivacyAddress")
-        let myStrPhone1 = myDefault.string(forKey:"phoneNumber1")
-        let myStrPhone2 = myDefault.string(forKey:"phoneNumber2")
-        //文字列が入っていたら表示する
-//        if let tmpStr1 = myStrMailAddress1 {
-//            myMailAdd1 = tmpStr1
-//        }
-//        if let tmpStr2 = myStrMailAddress2 {
-//            myMailAdd2 = tmpStr2
-//        }
-//        if let tmpStr3 = myStrMailAddress3 {
-//            myMailAdd3 = tmpStr3
-//        }
-//        if let tmpStr4 = myStr4 {
-//            myMailKenmei = tmpStr4
-//        }
-        myMailKenmei = myStr4
+//        myStrMailAddress1 = myDefault.string(forKey:"MailAddress1")!
+//        myStrMailAddress2 = myDefault.string(forKey:"MailAddress2")!
+//        myStrMailAddress3 = myDefault.string(forKey:"MailAddress3")!
+//        myStr4 = myDefault.string(forKey:"MailKenmei1")!
+//        myStr5 = myDefault.string(forKey:"MailContent")!
+//        myStrName = myDefault.string(forKey:"myPrivacyItems1")!
+//        myStrGender = myDefault.string(forKey:"myPrivacyGender")!
+//        myStrBirth = myDefault.string(forKey:"myPrivacyBirth")!
+//        myStrAdd = myDefault.string(forKey:"myPrivacyAddress")!
+//        myStrPhone1 = myDefault.string(forKey:"phoneNumber1")!
+//        myStrPhone2 = myDefault.string(forKey:"phoneNumber2")!
         
+        if myDefault.string(forKey:"MailAddress1") != nil{
+            myStrMailAddress1 = myDefault.string(forKey:"MailAddress1")!
+        }
+        if myDefault.string(forKey:"MailAddress2") != nil{
+            myStrMailAddress2 = myDefault.string(forKey:"MailAddress2")!
+        }
+        if myDefault.string(forKey:"MailAddress3") != nil{
+            myStrMailAddress3 = myDefault.string(forKey:"MailAddress3")!
+        }
+        if myDefault.string(forKey:"MailKenmei1") != nil{
+            myStr4 = myDefault.string(forKey:"MailKenmei1")!
+        }
+        if myDefault.string(forKey:"MailContent") != nil{
+            myStr5 = myDefault.string(forKey:"MailContent")!
+        }
+        if myDefault.string(forKey:"myPrivacyItems1") != nil{
+            myStrName = myDefault.string(forKey:"myPrivacyItems1")!
+        }
+        if myDefault.string(forKey:"myPrivacyGender") != nil{
+            myStrGender = myDefault.string(forKey:"myPrivacyGender")!
+        }
+        if myDefault.string(forKey:"myPrivacyBirth") != nil{
+            myStrBirth = myDefault.string(forKey:"myPrivacyBirth")!
+        }
+        if myDefault.string(forKey:"myPrivacyAddress") != nil{
+            myStrAdd = myDefault.string(forKey:"myPrivacyAddress")!
+        }
+        if myDefault.string(forKey:"phoneNumber1") != nil{
+            myStrPhone1 = myDefault.string(forKey:"phoneNumber1")!
+        }
+        if myDefault.string(forKey:"phoneNumber2") != nil{
+            myStrPhone2 = myDefault.string(forKey:"phoneNumber2")!
+        }
     }
     
     //sampleSendEmail
@@ -199,9 +227,9 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         composeVC.mailComposeDelegate = self
         
         // Configure the fields of the interface.
-        composeVC.setToRecipients(["address@example.com","test@gmail.com"])
-        composeVC.setSubject(myMailKenmei!)
-        composeVC.setMessageBody("Hello from California!", isHTML: false)
+        composeVC.setToRecipients(["\(myStrMailAddress1)","\(myStrMailAddress2)","\(myStrMailAddress3)"])
+        composeVC.setSubject("\(myStr4)")
+        composeVC.setMessageBody("\(myStr5)\(myStrName)\(myStrGender)\(myStrBirth)\(myStrAdd)\(myStrPhone1)\(myStrPhone2)", isHTML: false)
         
         // パスからassetを生成.
         let path = Bundle.main.path(forResource: "sample", ofType: "MOV")
