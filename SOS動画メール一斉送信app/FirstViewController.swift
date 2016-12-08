@@ -229,7 +229,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         // Configure the fields of the interface.
         composeVC.setToRecipients(["\(myStrMailAddress1)","\(myStrMailAddress2)","\(myStrMailAddress3)"])
         composeVC.setSubject("\(myStr4)")
-        composeVC.setMessageBody("\(myStr5)\(myStrName)\(myStrGender)\(myStrBirth)\(myStrAdd)\(myStrPhone1)\(myStrPhone2)", isHTML: false)
+        composeVC.setMessageBody("\(myStr5)\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)", isHTML: false)
         
         // パスからassetを生成.
         let path = Bundle.main.path(forResource: "sample", ofType: "MOV")
