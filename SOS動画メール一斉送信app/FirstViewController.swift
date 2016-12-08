@@ -14,8 +14,7 @@ import CoreLocation
 
 class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate, MFMailComposeViewControllerDelegate, CLLocationManagerDelegate {
     
-    @IBOutlet weak var myReview3: UITextView!
-    
+    //User default
     var myStrMailAddress1 = ""
     var myStrMailAddress2 = ""
     var myStrMailAddress3 = ""
@@ -27,8 +26,12 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     var myStrAdd = ""
     var myStrPhone1 = ""
     var myStrPhone2 = ""
-
     
+    //GPS
+    var addressGps = ""
+    var latlonTude = ""
+    
+    //AVVIDEO
     var session: AVCaptureSession!
     var videoDevice: AVCaptureDevice!
     var audioDevice: AVCaptureDevice!
@@ -47,7 +50,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         //    }
         //    @IBAction func tapRecord(_ sender: AnyObject) {
         print("recording started")
-        myLabel.text = "録画中"
+        myLabel.text = "[録画中]"
         //        myLabel.text = "recording started"
         filePath = NSHomeDirectory() + "/Documents/test.mp4"
         let fileURL: URL = URL(fileURLWithPath: filePath)
@@ -74,18 +77,18 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     
     func capture(_ captureOutput: AVCaptureFileOutput, didFinishRecordingToOutputFileAt outputFile: URL, fromConnections connections: [Any]!,error: Error) {
         print("recording finished")
-        myLabel.text = "録画終了"
+        myLabel.text = "[録画終了]"
         //        myLabel.text = "recording finished"
     }
     
     func video(_ videoPath: String, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
         if (error != nil) {
             print("video saving fails")
-            myLabel.text = "録画失敗"
+            myLabel.text = "[録画失敗]"
             //            myLabel.text = "video saving fails"
         } else {
             print("video saving success")
-            myLabel.text = "録画成功"
+            myLabel.text = "[録画成功]"
             //            myLabel.text = "video saving success"
         }
     }
@@ -137,8 +140,8 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     var latitude: CLLocationDegrees
     
     // storyboardで関連づけるLabel
-    @IBOutlet var latlonLabel: UILabel!
-    @IBOutlet var addressLabel: UILabel!
+//    @IBOutlet var latlonLabel: UILabel!
+//    @IBOutlet var addressLabel: UILabel!
     
     // CLLocationManagerDelegateを継承すると、init()が必要になる
     required init(coder aDecoder: NSCoder) {
@@ -157,9 +160,73 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareVideo()
+        
+        //GPS -CurrentAddress-
+        lm = CLLocationManager()
+        lm.delegate = self
+        
+        // セキュリティ認証のステータスを取得
+        let status = CLLocationManager.authorizationStatus()
+        
+        // まだ認証が得られていない場合は、認証ダイアログを表示
+        if status == CLAuthorizationStatus.notDetermined {
+            print("didChangeAuthorizationStatus:\(status)")
+            // まだ承認が得られていない場合は、認証ダイアログを表示
+            self.lm.requestAlwaysAuthorization()
+        }
+        
+        // 取得精度の設定
+        lm.desiredAccuracy = kCLLocationAccuracyBest
+        // 取得頻度の設定
+        lm.distanceFilter = 100
     }
     
-    //画面が表示されるとき
+    // 位置情報取得成功時
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations[0].coordinate.longitude)
+        print(locations[0].coordinate.latitude)
+        
+        longitude = locations[0].coordinate.longitude
+        latitude = locations[0].coordinate.latitude
+        latlonTude = "\(longitude), \(latitude)"
+        
+        // get address
+        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
+            if error != nil {
+                print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
+                return
+            }
+            if (placemarks?.count)! > 0 {
+                let pm = (placemarks?[0])! as CLPlacemark
+                self.displayLocationInfo(placemark: pm)
+                //stop updating location to save battery life
+                self.lm.stopUpdatingLocation()
+            } else {
+                print("Problem with the data received from geocoder")
+            }
+        })
+        
+    }
+    
+    // 位置情報表示
+    func displayLocationInfo(placemark: CLPlacemark) {
+        var address: String = ""
+        address = placemark.locality != nil ? placemark.locality! : ""
+        address += ","
+        address += placemark.postalCode != nil ? placemark.postalCode! : ""
+        address += ","
+        address += placemark.administrativeArea != nil ? placemark.administrativeArea! : ""
+        address += ","
+        address += placemark.country != nil ? placemark.country! : ""
+        addressGps = address
+    }
+    
+    // 位置情報取得失敗時
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        NSLog("Error while updating location. " + error.localizedDescription)
+    }
+    
+    //User default画面が表示されるとき
     override func viewWillAppear(_ animated: Bool) {
     
         //2.保存されたデーターを呼び出して表示
@@ -229,7 +296,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         // Configure the fields of the interface.
         composeVC.setToRecipients(["\(myStrMailAddress1)","\(myStrMailAddress2)","\(myStrMailAddress3)"])
         composeVC.setSubject("\(myStr4)")
-        composeVC.setMessageBody("\(myStr5)\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)", isHTML: false)
+        composeVC.setMessageBody("\(myStr5)\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)\n経度緯度　\(latlonTude)\n現場住所　\(addressGps)", isHTML: false)
         
         // パスからassetを生成.
         let path = Bundle.main.path(forResource: "sample", ofType: "MOV")
@@ -241,73 +308,6 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         self.present(composeVC, animated: true, completion: nil)
     }
     
-    
-//    //GPS -CurrentAddress-
-//    
-//        lm = CLLocationManager()
-//        lm.delegate = self
-//    
-//    // セキュリティ認証のステータスを取得
-//        let status = CLLocationManager.authorizationStatus()
-//    
-//    // まだ認証が得られていない場合は、認証ダイアログを表示
-//        if status == CLAuthorizationStatus.notDetermined {
-//        print("didChangeAuthorizationStatus:\(status)")
-//    // まだ承認が得られていない場合は、認証ダイアログを表示
-//        self.lm.requestAlwaysAuthorization()
-//    }
-//    
-//    // 取得精度の設定
-//        lm.desiredAccuracy = kCLLocationAccuracyBest
-//    // 取得頻度の設定
-//        lm.distanceFilter = 100
-//    }
-//
-//    // 位置情報取得成功時
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        print(locations[0].coordinate.longitude)
-//        print(locations[0].coordinate.latitude)
-//    
-//        longitude = locations[0].coordinate.longitude
-//        latitude = locations[0].coordinate.latitude
-//        self.latlonLabel.text = "\(longitude), \(latitude)"
-//    
-//    // get address
-//    CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
-//        if error != nil {
-//            print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
-//            return
-//        }
-//        if (placemarks?.count)! > 0 {
-//            let pm = (placemarks?[0])! as CLPlacemark
-//            self.displayLocationInfo(placemark: pm)
-//            //stop updating location to save battery life
-//            self.lm.stopUpdatingLocation()
-//        } else {
-//            print("Problem with the data received from geocoder")
-//        }
-//    })
-//    
-//    }
-//
-//    // 位置情報表示
-//    func displayLocationInfo(placemark: CLPlacemark) {
-//        var address: String = ""
-//            address = placemark.locality != nil ? placemark.locality! : ""
-//            address += ","
-//            address += placemark.postalCode != nil ? placemark.postalCode! : ""
-//            address += ","
-//            address += placemark.administrativeArea != nil ? placemark.administrativeArea! : ""
-//            address += ","
-//            address += placemark.country != nil ? placemark.country! : ""
-//            self.addressLabel.text = address
-//    }
-//
-//    // 位置情報取得失敗時
-//    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-//        NSLog("Error while updating location. " + error.localizedDescription)
-//    }
-//
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
