@@ -14,6 +14,15 @@ import CoreLocation
 
 class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate, MFMailComposeViewControllerDelegate, CLLocationManagerDelegate {
     
+    //時間計測用の変数.
+    var cnt : Float = 0
+    
+    //時間表示用のラベル.
+    var myLabelTimer : UILabel!
+    
+    //タイマー.
+    var timer : Timer!
+    
     //User default
     var myStrMailAddress1 = ""
     var myStrMailAddress2 = ""
@@ -53,6 +62,23 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         recStop.isHidden = false
         recStart.isHidden = true
         
+        //ラベルを作る.
+        myLabelTimer = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
+        //        myLabel.backgroundColor = UIColor.orange
+        myLabelTimer.layer.masksToBounds = true
+        myLabelTimer.layer.cornerRadius = 20.0
+        myLabelTimer.text = "Time:\(cnt)"
+        myLabelTimer.textColor = UIColor.red
+        //        myLabel.shadowColor = UIColor.gray
+        myLabelTimer.textAlignment = NSTextAlignment.center
+        myLabelTimer.layer.position = CGPoint(x: self.view.bounds.width/2,y: 50)
+        //        self.view.backgroundColor = UIColor.cyan
+        self.view.addSubview(myLabelTimer)
+        //タイマーを作る.
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(FirstViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
+        
+
+        
         //    @IBAction func tapRecord(_ sender: AnyObject) {
         print("recording started")
         myLabel.text = "[録画中]"
@@ -67,6 +93,19 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         
         recStart.isHidden = false
         recStop.isHidden = true
+        
+        //timerが動いてるなら.
+        if timer.isValid == true {
+            
+            //timerを破棄する.
+            timer.invalidate()
+            
+            cnt = 0
+            
+            myLabelTimer.text = ""
+
+            
+        }
         
         //    @IBAction func tapStop(_ sender: AnyObject) {
         fileOutput.stopRecording()
@@ -192,6 +231,18 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         lm.distanceFilter = 100
     }
     
+    //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
+    func onUpdate(timer : Timer){
+        
+        cnt += 0.1
+        
+        //桁数を指定して文字列を作る.
+        let str = "Time:".appendingFormat("%.1f",cnt)
+        
+        myLabelTimer.text = str
+        
+    }
+
     // 位置情報取得成功時
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(locations[0].coordinate.longitude)
