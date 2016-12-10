@@ -33,6 +33,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="btnGetLocationWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hKf-vU-bML"/>
                                     <action selector="tapRecord:" destination="9pv-A4-QxB" eventType="touchUpInside" id="HVH-Vd-PzU"/>
                                 </connections>
                             </button>
@@ -69,7 +70,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="btnGetLocationWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="6pw-pK-nBy"/>
                                     <action selector="tapStop:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3EQ-MA-693"/>
                                 </connections>
                             </button>
@@ -81,9 +81,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7m-Qf-oL2">
-                                <frame key="frameInset" minX="62" minY="375" width="92" height="30"/>
+                                <frame key="frameInset" minX="63" minY="375" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="録画画面表示"/>
+                                <state key="normal" title="画面切り替え"/>
                                 <connections>
                                     <action selector="tapPreview:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ocx-kR-mBB"/>
                                 </connections>
@@ -102,6 +102,8 @@
                     <tabBarItem key="tabBarItem" title="MENU画面" image="スクリーンショット 2016-11-19 21.56.16.png" selectedImage="MENU画面.png" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="myLabel" destination="LJQ-NK-Djp" id="deJ-XR-ae7"/>
+                        <outlet property="recStart" destination="hIj-Xb-8sT" id="Sff-7V-sXO"/>
+                        <outlet property="recStop" destination="vHT-vO-Sxr" id="6a8-5r-7Xd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -672,22 +674,22 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="録画中の画面表示、非表示の切り替えです" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyU-Je-0Mh">
-                                <frame key="frameInset" minX="19" minY="93" width="285" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="録画中の画面表示、非表示の切り替えボタンです" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyU-Je-0Mh">
+                                <frame key="frameInset" minX="16" minY="93" width="292" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="録画画面表示タップ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-Nq-Wim">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="画面切り替え" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-Nq-Wim">
                                 <frame key="frameInset" minX="47" minY="72" width="229" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="録画の開始と終了をします(録画された動画はカメラロール内に保存されます)この時点ではメール送信されません" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-tG-0IT">
-                                <frame key="frameInset" minX="16" minY="141" width="288" height="59"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="録画の開始と終了をします(録画された動画は[写真]の[カメラロール]内に保存されます)この時点ではメール送信されません" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-tG-0IT">
+                                <frame key="frameInset" minX="16" minY="141" width="288" height="66.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -924,7 +926,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="（例）緊急事態発生" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6u6-xZ-d3W">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="緊急事態発生" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6u6-xZ-d3W">
                                 <frame key="frameInset" minX="50" minY="155" width="262" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1011,20 +1013,21 @@
         <!--履歴画面-->
         <scene sceneID="5WY-1t-TMf">
             <objects>
-                <viewController id="9E7-fV-ZPO" customClass="FirstViewController" customModule="SOS動画メール一斉送信app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9E7-fV-ZPO" customClass="third1ViewController" customModule="SOS動画メール一斉送信app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5b2-lw-YgG"/>
                         <viewControllerLayoutGuide type="bottom" id="FfQ-KI-ygZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TCs-8m-KgO" customClass="thirdViewController" customModule="SOS動画メール一斉送信app" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="TCs-8m-KgO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="It completely sent the video and the masseges .                                       " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qM8-qa-dj3">
-                                <frame key="frameInset" minX="40" minY="97" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="It completely sent the video and the message." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XWF-iW-0ef">
+                                <frame key="frameInset" minX="16" minY="134" width="288" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -1034,7 +1037,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic8-B2-x7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631" y="-320"/>
+            <point key="canvasLocation" x="1629.375" y="-320.07042253521126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

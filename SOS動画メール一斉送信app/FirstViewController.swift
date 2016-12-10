@@ -40,14 +40,19 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     var fileOutput: AVCaptureMovieFileOutput!
     var filePath: String!
     
+    @IBOutlet weak var recStart: UIButton!
     
+    @IBOutlet weak var recStop: UIButton!
     var previewFlag: Bool = false;
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     @IBOutlet weak var myLabel: UILabel!
     
     @IBAction func tapRecord(_ sender: UIButton) {
-        //    }
+        
+        recStop.isHidden = false
+        recStart.isHidden = true
+        
         //    @IBAction func tapRecord(_ sender: AnyObject) {
         print("recording started")
         myLabel.text = "[録画中]"
@@ -59,7 +64,10 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         fileOutput.startRecording(toOutputFileURL: fileURL, recordingDelegate: self)
     }
     @IBAction func tapStop(_ sender: UIButton) {
-        //    }
+        
+        recStart.isHidden = false
+        recStop.isHidden = true
+        
         //    @IBAction func tapStop(_ sender: AnyObject) {
         fileOutput.stopRecording()
         session.stopRunning()
@@ -160,6 +168,9 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareVideo()
+        
+        recStop.isHidden = true
+        
         
         //GPS -CurrentAddress-
         lm = CLLocationManager()
@@ -299,7 +310,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         composeVC.setMessageBody("\(myStr5)\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)\n経度緯度　\(latlonTude)\n現場住所　\(addressGps)", isHTML: false)
         
         // パスからassetを生成.
-        let path = Bundle.main.path(forResource: "sample", ofType: "MOV")
+        let path = filePath
         let avAsset = NSData(contentsOfFile: path!)
         
         composeVC.addAttachmentData(avAsset as! Data, mimeType: "video/quicktime", fileName: "testmovie")

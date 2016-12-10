@@ -11,11 +11,9 @@
 		121E253B1DF7334100FDF456 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253A1DF7334100FDF456 /* CoreLocation.framework */; };
 		121E253D1DF7C0D600FDF456 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253C1DF7C0D600FDF456 /* MessageUI.framework */; };
 		121E25411DF82D8100FDF456 /* gpsLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E25401DF82D8100FDF456 /* gpsLocationViewController.swift */; };
-		121E25431DF846E100FDF456 /* sample.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 121E25421DF846E100FDF456 /* sample.MOV */; };
 		1226E0781DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */; };
 		1226E07A1DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226E0791DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift */; };
-		1226E07D1DF3E53F002CC8C2 /* nocheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 1226E07B1DF3E53F002CC8C2 /* nocheck.png */; };
-		1226E07E1DF3E53F002CC8C2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 1226E07C1DF3E53F002CC8C2 /* check.png */; };
+		12297CA51DFC4E4D0062EC84 /* third1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12297CA41DFC4E4D0062EC84 /* third1ViewController.swift */; };
 		122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA11DDDD77B002F6971 /* AppDelegate.swift */; };
 		122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA31DDDD77B002F6971 /* FirstViewController.swift */; };
 		122DDDA61DDDD77B002F6971 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDA51DDDD77B002F6971 /* SecondViewController.swift */; };
@@ -24,7 +22,6 @@
 		122DDDAE1DDDD77B002F6971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */; };
 		122DDDB91DDDD77B002F6971 /* SOS_________appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDB81DDDD77B002F6971 /* SOS_________appTests.swift */; };
 		122DDDC41DDDD77B002F6971 /* SOS_________appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */; };
-		122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */; };
 		128E1B1D1DEC719200061FD6 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128E1B1C1DEC719200061FD6 /* AssetsLibrary.framework */; };
 		128E1B1F1DEC719A00061FD6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128E1B1E1DEC719A00061FD6 /* AVFoundation.framework */; };
 		129291AB1DE095E80032BBF0 /* MENU画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 129291AA1DE095E80032BBF0 /* MENU画面.png */; };
@@ -60,11 +57,9 @@
 		121E253A1DF7334100FDF456 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		121E253C1DF7C0D600FDF456 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		121E25401DF82D8100FDF456 /* gpsLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gpsLocationViewController.swift; sourceTree = "<group>"; };
-		121E25421DF846E100FDF456 /* sample.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = sample.MOV; sourceTree = "<group>"; };
 		1226E0771DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems1ViewController.swift; sourceTree = "<group>"; };
 		1226E0791DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems2ViewController.swift; sourceTree = "<group>"; };
-		1226E07B1DF3E53F002CC8C2 /* nocheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nocheck.png; sourceTree = "<group>"; };
-		1226E07C1DF3E53F002CC8C2 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		12297CA41DFC4E4D0062EC84 /* third1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = third1ViewController.swift; sourceTree = "<group>"; };
 		122DDD9E1DDDD77B002F6971 /* SOS動画メール一斉送信app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOS動画メール一斉送信app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122DDDA11DDDD77B002F6971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		122DDDA31DDDD77B002F6971 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +74,6 @@
 		122DDDBF1DDDD77B002F6971 /* SOS動画メール一斉送信appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SOS動画メール一斉送信appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122DDDC31DDDD77B002F6971 /* SOS_________appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SOS_________appUITests.swift"; sourceTree = "<group>"; };
 		122DDDC51DDDD77B002F6971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
 		128E1B1C1DEC719200061FD6 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		128E1B1E1DEC719A00061FD6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		129291AA1DE095E80032BBF0 /* MENU画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MENU画面.png"; sourceTree = "<group>"; };
@@ -149,14 +143,11 @@
 				129291AA1DE095E80032BBF0 /* MENU画面.png */,
 				129291AC1DE095FA0032BBF0 /* 初期設定画面.png */,
 				129291AE1DE098AA0032BBF0 /* 履歴画面.png */,
-				1226E07C1DF3E53F002CC8C2 /* check.png */,
-				1226E07B1DF3E53F002CC8C2 /* nocheck.png */,
-				121E25421DF846E100FDF456 /* sample.MOV */,
 				122DDDA11DDDD77B002F6971 /* AppDelegate.swift */,
 				122DDDA31DDDD77B002F6971 /* FirstViewController.swift */,
 				122DDDA71DDDD77B002F6971 /* Main.storyboard */,
 				122DDDA51DDDD77B002F6971 /* SecondViewController.swift */,
-				122DDDD11DDDDF3A002F6971 /* thirdViewController.swift */,
+				12297CA41DFC4E4D0062EC84 /* third1ViewController.swift */,
 				122DDDAA1DDDD77B002F6971 /* Assets.xcassets */,
 				122DDDAC1DDDD77B002F6971 /* LaunchScreen.storyboard */,
 				122DDDAF1DDDD77B002F6971 /* Info.plist */,
@@ -312,11 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				122DDDAE1DDDD77B002F6971 /* LaunchScreen.storyboard in Resources */,
-				1226E07D1DF3E53F002CC8C2 /* nocheck.png in Resources */,
-				1226E07E1DF3E53F002CC8C2 /* check.png in Resources */,
 				122DDDAB1DDDD77B002F6971 /* Assets.xcassets in Resources */,
 				122DDDA91DDDD77B002F6971 /* Main.storyboard in Resources */,
-				121E25431DF846E100FDF456 /* sample.MOV in Resources */,
 				129291AF1DE098AA0032BBF0 /* 履歴画面.png in Resources */,
 				129291AB1DE095E80032BBF0 /* MENU画面.png in Resources */,
 				129291AD1DE095FA0032BBF0 /* 初期設定画面.png in Resources */,
@@ -349,9 +337,9 @@
 				12DD88631DF31E2500D95A42 /* myPrivacyItems4ViewController.swift in Sources */,
 				122DDDA21DDDD77B002F6971 /* AppDelegate.swift in Sources */,
 				1226E0781DF342DC002CC8C2 /* myPrivacyItems1ViewController.swift in Sources */,
+				12297CA51DFC4E4D0062EC84 /* third1ViewController.swift in Sources */,
 				121E25411DF82D8100FDF456 /* gpsLocationViewController.swift in Sources */,
 				12DD88651DF329E700D95A42 /* myPrivacyItems5ViewController.swift in Sources */,
-				122DDDD21DDDDF3A002F6971 /* thirdViewController.swift in Sources */,
 				120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */,
 				1226E07A1DF3E374002CC8C2 /* myPrivacyItems2ViewController.swift in Sources */,
 				122DDDA41DDDD77B002F6971 /* FirstViewController.swift in Sources */,
