@@ -22,6 +22,29 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // セクションの高さ
+        myTableView.sectionHeaderHeight = 40;
+        // 境界線
+//        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle;
+        // 境界線の色
+        myTableView.separatorColor = (UIColor.lightGray)
+    }
+    
+    //sectionの色、文字型変更
+    var sections = ["メール内容", "個人情報","操作説明"] // セクション名を格納しておく
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label : UILabel = UILabel()
+        label.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
+        label.textColor = UIColor.black
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        if(section == 0){
+            label.text = sections[section]
+        } else if (section == 1){
+            label.text = sections[section]
+        } else if (section == 2){
+            label.text = sections[section]
+        }
+        return label
     }
     
     //完了ボタンタップ後入力内容を即反映させる
@@ -128,7 +151,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
 //    //cellの高さを指定する
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        
-//        if  (indexPath.section == 0 && indexPath.row == 2) {
+//        if  (indexPath.section == 0 ) {
 //            return 80
 //        }else{
 //            return 30

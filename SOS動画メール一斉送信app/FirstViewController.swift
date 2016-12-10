@@ -49,9 +49,11 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     var fileOutput: AVCaptureMovieFileOutput!
     var filePath: String!
     
-    @IBOutlet weak var recStart: UIButton!
+    @IBOutlet weak var sendMail: UIButton!
     
+    @IBOutlet weak var recStart: UIButton!
     @IBOutlet weak var recStop: UIButton!
+    
     var previewFlag: Bool = false;
     var previewLayer: AVCaptureVideoPreviewLayer!
     
@@ -93,6 +95,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         
         recStart.isHidden = false
         recStop.isHidden = true
+        sendMail.isHidden = false
         
         //timerが動いてるなら.
         if timer.isValid == true {
@@ -129,6 +132,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     }
     
     func video(_ videoPath: String, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
+        
         if (error != nil) {
             print("video saving fails")
             myLabel.text = "[録画失敗]"
@@ -209,7 +213,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         prepareVideo()
         
         recStop.isHidden = true
-        
+        sendMail.isHidden = true
         
         //GPS -CurrentAddress-
         lm = CLLocationManager()
