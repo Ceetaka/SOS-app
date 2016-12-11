@@ -49,7 +49,8 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     var fileOutput: AVCaptureMovieFileOutput!
     var filePath: String!
     
-    @IBOutlet weak var sendMail: UIButton!
+    
+    @IBOutlet weak var btnMailSend: UIButton!
     
     @IBOutlet weak var recStart: UIButton!
     @IBOutlet weak var recStop: UIButton!
@@ -95,7 +96,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         
         recStart.isHidden = false
         recStop.isHidden = true
-        sendMail.isHidden = false
+        btnMailSend.isHidden = false
         
         //timerが動いてるなら.
         if timer.isValid == true {
@@ -213,7 +214,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         prepareVideo()
         
         recStop.isHidden = true
-        sendMail.isHidden = true
+        btnMailSend.isHidden = true
         
         //GPS -CurrentAddress-
         lm = CLLocationManager()
@@ -362,7 +363,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         // Configure the fields of the interface.
         composeVC.setToRecipients(["\(myStrMailAddress1)","\(myStrMailAddress2)","\(myStrMailAddress3)"])
         composeVC.setSubject("\(myStr4)")
-        composeVC.setMessageBody("\(myStr5)\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)\n経度緯度　\(latlonTude)\n現場住所　\(addressGps)", isHTML: false)
+        composeVC.setMessageBody("SOS動画メール送信APPより送信。\n\n\(myStr5)\n\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)\n経度緯度　\(latlonTude)\n現場住所　\(addressGps)", isHTML: false)
         
         // パスからassetを生成.
         let path = filePath
@@ -373,6 +374,21 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
     }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        if result == MFMailComposeResult.cancelled {
+            print("メール送信がキャンセルされました")
+        } else if result == MFMailComposeResult.saved {
+            print("下書きとして保存されました")
+        } else if result == MFMailComposeResult.sent {
+            print("メール送信に成功しました")
+        } else if result == MFMailComposeResult.failed {
+            print("メール送信に失敗しました")
+        }
+        dismiss(animated: true, completion: nil) //閉じる
+    }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

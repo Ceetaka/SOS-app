@@ -88,14 +88,6 @@
                                     <action selector="tapPreview:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ocx-kR-mBB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="(必ず上記[録画ログ]表示が[録画終了]→[録画成功]に表示変更後メール送信)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hiy-Gw-QID">
-                                <frame key="frameInset" minX="9" minY="201" width="302" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeX-1m-kUa">
                                 <frame key="frameInset" minX="210" minY="419" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -119,10 +111,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="MENU画面" image="スクリーンショット 2016-11-19 21.56.16.png" selectedImage="MENU画面.png" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="btnMailSend" destination="SeX-1m-kUa" id="cXI-uJ-F4T"/>
                         <outlet property="myLabel" destination="LJQ-NK-Djp" id="deJ-XR-ae7"/>
                         <outlet property="recStart" destination="hIj-Xb-8sT" id="Sff-7V-sXO"/>
                         <outlet property="recStop" destination="vHT-vO-Sxr" id="6a8-5r-7Xd"/>
-                        <outlet property="sendMail" destination="SeX-1m-kUa" id="Z0E-Jq-QMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -156,7 +148,7 @@
                                         <rect key="frame" x="0.0" y="55" width="321" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AzI-eo-jCt" id="LVb-DW-q7X">
-                                            <frame key="frameInset" width="321" height="42"/>
+                                            <frame key="frameInset" width="321" height="42.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-PR-0Zc">
@@ -185,7 +177,7 @@
                                         <rect key="frame" x="0.0" y="98" width="321" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMh-Ob-2Qv" id="JRp-Xm-2BX">
-                                            <frame key="frameInset" width="321" height="44"/>
+                                            <frame key="frameInset" width="321" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NL-Oj-0UX">
@@ -214,7 +206,7 @@
                                         <rect key="frame" x="0.0" y="143" width="321" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VvG-KA-57B" id="M5W-9u-lCX">
-                                            <frame key="frameInset" width="321" height="46"/>
+                                            <frame key="frameInset" width="321" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWu-Kq-Mwx">
@@ -243,7 +235,7 @@
                                         <rect key="frame" x="0.0" y="190" width="321" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uWy-GQ-Lxi" id="VrM-OU-vTZ">
-                                            <frame key="frameInset" width="321" height="46"/>
+                                            <frame key="frameInset" width="321" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhz-Sa-9YM">
@@ -272,7 +264,7 @@
                                         <rect key="frame" x="0.0" y="237" width="321" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tMk-kL-YvF" id="Xyh-JO-eeP">
-                                            <frame key="frameInset" width="321" height="46"/>
+                                            <frame key="frameInset" width="321" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwF-mH-Y5K">
@@ -301,7 +293,7 @@
                                         <rect key="frame" x="0.0" y="284" width="321" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hk6-SV-Cv4" id="bu1-tr-8jE">
-                                            <frame key="frameInset" width="321" height="46"/>
+                                            <frame key="frameInset" width="321" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiz-L8-iNu">
@@ -330,7 +322,7 @@
                                         <rect key="frame" x="0.0" y="331" width="321" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XdL-fK-0f2" id="4eD-NE-zbt">
-                                            <frame key="frameInset" width="321" height="46"/>
+                                            <frame key="frameInset" width="321" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6V-xN-rOr">
@@ -359,7 +351,7 @@
                                         <rect key="frame" x="0.0" y="378" width="321" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UeA-4m-uxD" id="tg4-8P-zO7">
-                                            <frame key="frameInset" width="321" height="46"/>
+                                            <frame key="frameInset" width="321" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2b-ij-QgL">
@@ -388,7 +380,7 @@
                                         <rect key="frame" x="0.0" y="425" width="321" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tzX-T1-ny8" id="3Yg-vx-aTZ">
-                                            <frame key="frameInset" width="321" height="46"/>
+                                            <frame key="frameInset" width="321" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVj-r3-9hm">
@@ -707,7 +699,7 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="録画の開始と終了をします(録画された動画は[写真]の[カメラロール]内に保存されます)この時点ではメール送信されません" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-tG-0IT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="録画の開始と終了をします(録画された動画は[写真]の[カメラロール]内に保存されます)この時点ではメール送信されません" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-tG-0IT">
                                 <frame key="frameInset" minX="16" minY="141" width="288" height="66.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
