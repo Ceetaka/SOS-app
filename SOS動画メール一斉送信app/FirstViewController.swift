@@ -363,7 +363,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         // Configure the fields of the interface.
         composeVC.setToRecipients(["\(myStrMailAddress1)","\(myStrMailAddress2)","\(myStrMailAddress3)"])
         composeVC.setSubject("\(myStr4)")
-        composeVC.setMessageBody("SOS動画メール送信APPより送信。\n\n\(myStr5)\n\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)\n経度緯度　\(latlonTude)\n現場住所　\(addressGps)", isHTML: false)
+        composeVC.setMessageBody("SOS動画メール送信APPより送信。\n\n\(myStr5)\n\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)\n現場経度緯度　\(latlonTude)\n現場住所　\(addressGps)", isHTML: false)
         
         // パスからassetを生成.
         let path = filePath
@@ -381,7 +381,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         } else if result == MFMailComposeResult.saved {
             print("下書きとして保存されました")
         } else if result == MFMailComposeResult.sent {
-            print("メール送信に成功しました")
+            print("It completely sent the video and the messages.\nメール送信に成功しました")
         } else if result == MFMailComposeResult.failed {
             print("メール送信に失敗しました")
         }
