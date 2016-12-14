@@ -12,16 +12,17 @@ import AssetsLibrary
 import MessageUI
 import CoreLocation
 
+
 class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate, MFMailComposeViewControllerDelegate, CLLocationManagerDelegate {
     
-    //時間計測用の変数.
-    var cnt : Float = 0
+    // 時間表示用のラベル
+    @IBOutlet weak var lbTimeLabel: UILabel!
     
-    //時間表示用のラベル.
-    var myLabelTimer : UILabel!
+    // NSTimeInterval：時間を計算するメソッド
+    var startTime = TimeInterval()
     
-    //タイマー.
-    var timer : Timer!
+    // NSTimer：タイマーを管理するクラス
+    var timer:Timer = Timer()
     
     //User default
     var myStrMailAddress1 = ""
@@ -49,8 +50,9 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     var fileOutput: AVCaptureMovieFileOutput!
     var filePath: String!
     
+    @IBOutlet weak var resultTextView: UITextView!
     
-    @IBOutlet weak var btnMailSend: UIButton!
+    @IBOutlet weak var sendMail: UIButton!
     
     @IBOutlet weak var recStart: UIButton!
     @IBOutlet weak var recStop: UIButton!
@@ -64,24 +66,25 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         
         recStop.isHidden = false
         recStart.isHidden = true
+        sendMail.isHidden = true
+        resultTextView.text = ""
         
-        //ラベルを作る.
-        myLabelTimer = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
-        //        myLabel.backgroundColor = UIColor.orange
-        myLabelTimer.layer.masksToBounds = true
-        myLabelTimer.layer.cornerRadius = 20.0
-        myLabelTimer.text = "Time:\(cnt)"
-        myLabelTimer.textColor = UIColor.red
-        //        myLabel.shadowColor = UIColor.gray
-        myLabelTimer.textAlignment = NSTextAlignment.center
-        myLabelTimer.layer.position = CGPoint(x: self.view.bounds.width/2,y: 50)
-        //        self.view.backgroundColor = UIColor.cyan
-        self.view.addSubview(myLabelTimer)
-        //タイマーを作る.
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(FirstViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
-        
-
-        
+        //もし、〔スタートボタン：StartAction〕が押されたら〔関数：StartTime〕を呼び出す
+        if (!timer.isValid) {
+            
+            // NSTimer：タイマーを管理するクラス
+            timer = Timer.scheduledTimer(
+                timeInterval: 0.01,                                   // 時間の間隔〔0.01〕
+                target: self,                           // タイマーの実際の処理の場所
+                selector: #selector(FirstViewController.StartTime),        // メソッド タイマーの実際の処理
+                userInfo: nil,
+                repeats: true)                          // 繰り返し
+            
+            // NSDate：日付と時間を管理するクラス
+            startTime = NSDate.timeIntervalSinceReferenceDate
+        }
+    
+    
         //    @IBAction func tapRecord(_ sender: AnyObject) {
         print("recording started")
         myLabel.text = "[録画中]"
@@ -96,20 +99,10 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         
         recStart.isHidden = false
         recStop.isHidden = true
-        btnMailSend.isHidden = false
+        sendMail.isHidden = false
         
-        //timerが動いてるなら.
-        if timer.isValid == true {
-            
-            //timerを破棄する.
-            timer.invalidate()
-            
-            cnt = 0
-            
-            myLabelTimer.text = ""
-
-            
-        }
+        // 無効化〔invalidate：無効化〕
+        timer.invalidate()
         
         //    @IBAction func tapStop(_ sender: AnyObject) {
         fileOutput.stopRecording()
@@ -117,7 +110,39 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         UISaveVideoAtPathToSavedPhotosAlbum(filePath, self, #selector(FirstViewController.video(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
+    // Timeスタート
+    func StartTime() {
+        var currentTime = NSDate.timeIntervalSinceReferenceDate
+        
+        // 現在の時間を調べるためにスタートします
+        var Time: TimeInterval = currentTime - startTime
+        
+        //〔分〕を計算
+        // UInt8：8 ビット符号なし整数への変換
+        // NSTimeInterval：引数に時間の長さを示す値
+        let minutes = UInt8(Time / 60.0)
+        Time -= (TimeInterval(minutes) * 60)
+        
+        //〔秒〕を計算
+        let seconds = UInt8(Time)
+        Time -= TimeInterval(seconds)
+        
+        //〔ミリ秒〕を計算
+        let fraction = UInt8(Time * 100)
+        
+        //〔分〕〔秒〕〔ミリ秒〕を文字列にします
+        let timeMinutes = minutes > 9 ? String(minutes):"0" + String(minutes)
+        let timeSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+        let timeFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
+        
+        // 時間表示用のラベルに〔分〕〔秒〕〔ミリ秒〕を表示
+        lbTimeLabel.text = "\(timeMinutes):\(timeSeconds):\(timeFraction)"
+    }
+    
     @IBAction func tapPreview(_ sender: AnyObject) {
+        
+        resultTextView.text = ""
+        
         if previewFlag {
             previewLayer.removeFromSuperlayer()
         } else {
@@ -162,6 +187,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
             } else {
                 print("cannot add video input to session")
             }
+            
             audioInput = try AVCaptureDeviceInput(device: audioDevice)
             if (session.canAddInput(audioInput)) {
                 session.addInput(audioInput)
@@ -214,7 +240,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         prepareVideo()
         
         recStop.isHidden = true
-        btnMailSend.isHidden = true
+        sendMail.isHidden = true
         
         //GPS -CurrentAddress-
         lm = CLLocationManager()
@@ -236,17 +262,17 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         lm.distanceFilter = 100
     }
     
-    //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
-    func onUpdate(timer : Timer){
-        
-        cnt += 0.1
-        
-        //桁数を指定して文字列を作る.
-        let str = "Time:".appendingFormat("%.1f",cnt)
-        
-        myLabelTimer.text = str
-        
-    }
+//    //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
+//    func onUpdate(timer : Timer){
+//        
+//        cnt += 0.1
+//        
+//        //桁数を指定して文字列を作る.
+//        let str = "Time:".appendingFormat("%.1f",cnt)
+//        
+//        myLabelTimer.text = str
+//        
+//    }
 
     // 位置情報取得成功時
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -363,7 +389,7 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
         // Configure the fields of the interface.
         composeVC.setToRecipients(["\(myStrMailAddress1)","\(myStrMailAddress2)","\(myStrMailAddress3)"])
         composeVC.setSubject("\(myStr4)")
-        composeVC.setMessageBody("SOS動画メール送信APPより送信。\n\n\(myStr5)\n\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)\n現場経度緯度　\(latlonTude)\n現場住所　\(addressGps)", isHTML: false)
+        composeVC.setMessageBody("SOS動画メール送信APPより送信。\n\n\(myStr5)\n\n氏名　\(myStrName)\n血液型　\(myStrGender)\n生年月日　\(myStrBirth)\n住所　\(myStrAdd)\n携帯電話番号　\(myStrPhone1)\n電話番号　\(myStrPhone2)\n経度緯度　\(latlonTude)\n現場住所　\(addressGps)", isHTML: false)
         
         // パスからassetを生成.
         let path = filePath
@@ -376,19 +402,21 @@ class FirstViewController: UIViewController,AVCaptureFileOutputRecordingDelegate
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        myLabel.text = "[録画ログ]"
+        resultTextView.text = ""
+        
+        
         if result == MFMailComposeResult.cancelled {
-            print("メール送信がキャンセルされました")
+            resultTextView.text = "メール送信がキャンセルされました"
         } else if result == MFMailComposeResult.saved {
-            print("下書きとして保存されました")
+            resultTextView.text = "下書きとして保存されました"
         } else if result == MFMailComposeResult.sent {
-            print("It completely sent the video and the messages.\nメール送信に成功しました")
+            resultTextView.text = "It completely sent the video and the messages.\n\nメール送信に成功しました"
         } else if result == MFMailComposeResult.failed {
-            print("メール送信に失敗しました")
+            resultTextView.text = "メール送信に失敗しました"
         }
         dismiss(animated: true, completion: nil) //閉じる
     }
-    
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
