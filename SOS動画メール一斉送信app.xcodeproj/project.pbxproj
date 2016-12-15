@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1202A2B91DFFCC360041CC7D /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1202A2B81DFFCC350041CC7D /* Photos.framework */; };
 		120BF6AC1DE72FA600233D78 /* myMailItems1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */; };
 		121E253B1DF7334100FDF456 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253A1DF7334100FDF456 /* CoreLocation.framework */; };
 		121E253D1DF7C0D600FDF456 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E253C1DF7C0D600FDF456 /* MessageUI.framework */; };
@@ -32,6 +31,7 @@
 		12DD88651DF329E700D95A42 /* myPrivacyItems5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DD88641DF329E700D95A42 /* myPrivacyItems5ViewController.swift */; };
 		12DD88671DF3317700D95A42 /* myPrivacyItems3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DD88661DF3317700D95A42 /* myPrivacyItems3ViewController.swift */; };
 		12E1758F1E01883D004BB9FB /* userLicenseAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E1758E1E01883D004BB9FB /* userLicenseAgreementViewController.swift */; };
+		12EA5B6E1E02CF8F00D4E9D3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EA5B6D1E02CF8F00D4E9D3 /* SystemConfiguration.framework */; };
 		12F54C3A1DE8A5DA00AF12B2 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F54C391DE8A5DA00AF12B2 /* myTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1202A2B81DFFCC350041CC7D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		120BF6AB1DE72FA600233D78 /* myMailItems1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMailItems1ViewController.swift; sourceTree = "<group>"; };
 		121E253A1DF7334100FDF456 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		121E253C1DF7C0D600FDF456 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -84,6 +83,7 @@
 		12DD88641DF329E700D95A42 /* myPrivacyItems5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems5ViewController.swift; sourceTree = "<group>"; };
 		12DD88661DF3317700D95A42 /* myPrivacyItems3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPrivacyItems3ViewController.swift; sourceTree = "<group>"; };
 		12E1758E1E01883D004BB9FB /* userLicenseAgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userLicenseAgreementViewController.swift; sourceTree = "<group>"; };
+		12EA5B6D1E02CF8F00D4E9D3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		12F54C391DE8A5DA00AF12B2 /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1202A2B91DFFCC360041CC7D /* Photos.framework in Frameworks */,
+				12EA5B6E1E02CF8F00D4E9D3 /* SystemConfiguration.framework in Frameworks */,
 				121E253D1DF7C0D600FDF456 /* MessageUI.framework in Frameworks */,
 				121E253B1DF7334100FDF456 /* CoreLocation.framework in Frameworks */,
 				128E1B1F1DEC719A00061FD6 /* AVFoundation.framework in Frameworks */,
@@ -186,7 +186,7 @@
 		128E1B1B1DEC719200061FD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1202A2B81DFFCC350041CC7D /* Photos.framework */,
+				12EA5B6D1E02CF8F00D4E9D3 /* SystemConfiguration.framework */,
 				121E253C1DF7C0D600FDF456 /* MessageUI.framework */,
 				121E253A1DF7334100FDF456 /* CoreLocation.framework */,
 				128E1B1E1DEC719A00061FD6 /* AVFoundation.framework */,

@@ -5,9 +5,9 @@
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>rr</string>
+	<string>動画をPhoto Libraryに保存</string>
 	<key>NSCameraUsageDescription</key>
-	<string>cameraroll error</string>
+	<string>動画を撮影</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>GPSを常に許可</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
